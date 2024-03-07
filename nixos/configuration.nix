@@ -8,7 +8,10 @@
 }: {
   imports = [
     # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
+    ./hardware-configuration.nix
+
+    # vscode options
+    ../vscode/config.nix
   ];
 
   # Bootloader.
@@ -16,11 +19,6 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -43,19 +41,6 @@
     LC_TIME = "de_DE.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "altgr-intl";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -76,8 +61,8 @@
     #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  nix.optimise.automatic = true;
+  nix.optimise.dates = ["9:00"];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.admin = {
@@ -94,14 +79,46 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged
+    # programs here, NOT in environment.systemPackages
+  ];
+
   environment.localBinInPath = true;
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
     #wget
     neofetch
     pkgs.alejandra
+    pkgs.mako
+    pkgs.fuzzel
+    pkgs.wl-clipboard
+    pkgs.kitty
   ];
 
+  programs.hyprland.enable = true;
+  programs.sway.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session.command = ''
+        ${pkgs.greetd.tuigreet}/bin/tuigreet \
+                    --time \
+               --asterisks \
+               --user-menu \
+               --cmd 'Hyprland -c ~/dotfiles/hyprland/hyprland.conf'
+      '';
+    };
+  };
+
+  environment.etc."greetd/environments".text = ''
+    Hyprland
+    Sway
+  '';
   programs.vim = {
     defaultEditor = true;
   };
