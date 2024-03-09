@@ -4,6 +4,7 @@
 {
   config,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
@@ -11,7 +12,10 @@
     ./hardware-configuration.nix
 
     # vscode options
-    ../vscode/config.nix
+    ./vscode/config.nix
+
+    # home manager
+    inputs.home-manager.nixosModules.default
   ];
 
   # Bootloader.
@@ -35,10 +39,10 @@
     LC_MEASUREMENT = "de_DE.UTF-8";
     LC_MONETARY = "de_DE.UTF-8";
     LC_NAME = "de_DE.UTF-8";
-    LC_NUMERIC = "de_DE.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
     LC_PAPER = "de_DE.UTF-8";
     LC_TELEPHONE = "de_DE.UTF-8";
-    LC_TIME = "de_DE.UTF-8";
+    LC_TIME = "en_US.UTF-8";
   };
 
   # Enable CUPS to print documents.
@@ -48,6 +52,7 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+  security.pam.services.swaylock = {};
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -62,7 +67,6 @@
   };
 
   nix.optimise.automatic = true;
-  nix.optimise.dates = ["9:00"];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.admin = {
@@ -71,8 +75,6 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
-      kate
-      #  thunderbird
     ];
   };
 
@@ -87,20 +89,37 @@
 
   environment.localBinInPath = true;
 
+  programs.bash.shellAliases = {
+    ll = "ls -Alh";
+    l = "ls -l";
+    ls = "ls --color=tty";
+  };
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
-    #wget
     neofetch
+    # formatting .nix files
     pkgs.alejandra
+
+    # alertdialogs
+    pkgs.libnotify
     pkgs.mako
+
+    # screen locking
+    pkgs.swaylock
+
+    # program starter
     pkgs.fuzzel
-    pkgs.wl-clipboard
+
+    # terminal
     pkgs.kitty
+
+    # appbar
+    pkgs.waybar
   ];
 
   programs.hyprland.enable = true;
-  programs.sway.enable = true;
 
   services.greetd = {
     enable = true;
@@ -117,19 +136,12 @@
 
   environment.etc."greetd/environments".text = ''
     Hyprland
-    Sway
   '';
-  programs.vim = {
-    defaultEditor = true;
-  };
-
-  programs.git = {
-    enable = true;
-  };
-
-  programs.bash = {
-    enableCompletion = true;
-    enableLsColors = true;
+  home-manager = {
+    extraSpecialArgs = {inherit inputs;};
+    users = {
+      "admin" = import ./home.nix;
+    };
   };
 
   # This value determines the NixOS release from which the default
