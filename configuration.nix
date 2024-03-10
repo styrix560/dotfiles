@@ -110,9 +110,6 @@
     # program starter
     pkgs.fuzzel
 
-    # terminal
-    pkgs.kitty
-
     # appbar
     pkgs.waybar
 
