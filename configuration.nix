@@ -120,6 +120,7 @@
 
     # spotify
     pkgs.spotify
+    pkgs.spotifyd
   ];
 
   programs.hyprland.enable = true;
