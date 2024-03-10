@@ -88,8 +88,8 @@
   environment.localBinInPath = true;
 
   programs.bash.shellAliases = {
-    ll = "ls -Alh";
-    l = "ls -l";
+    ll = "ls -Alh --group-directories-first";
+    l = "ls -l --group-directories-first";
     ls = "ls --color=tty";
   };
 
