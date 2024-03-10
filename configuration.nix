@@ -127,7 +127,7 @@
                     --time \
                --asterisks \
                --user-menu \
-               --cmd 'Hyprland -c ~/dotfiles/hyprland/hyprland.conf'
+               --cmd 'Hyprland'
       '';
     };
   };
