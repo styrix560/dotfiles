@@ -117,6 +117,9 @@
 
     # appbar
     pkgs.waybar
+
+    # spotify
+    pkgs.spotify
   ];
 
   programs.hyprland.enable = true;
