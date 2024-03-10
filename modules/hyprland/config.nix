@@ -66,7 +66,7 @@
       drop_shadow = true;
       shadow_range = 4;
       shadow_render_power = 3;
-      col.shadow = "rgba(1a1a1aee)";
+      "col.shadow" = "rgba(1a1a1aee)";
     };
 
     animations = {
@@ -75,7 +75,7 @@
       bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
       animation = [
-        "windows, 1, 7, myBezier"
+        "windows, 1, 7, bezier"
         "windowsOut, 1, 7, default popin 80%"
         "border, 1, 10, default"
         "borderangle, 1, 8, default"
