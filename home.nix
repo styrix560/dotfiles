@@ -3,6 +3,10 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./modules/hyprland/config.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "admin";
@@ -91,7 +95,6 @@
   #  /etc/profiles/per-user/admin/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
