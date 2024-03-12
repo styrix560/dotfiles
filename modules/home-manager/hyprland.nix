@@ -10,7 +10,7 @@
     ];
 
     # programs
-    "$terminal" = "kitty";
+    "$terminal" = "zsh";
     "$browser" = "firefox";
     "$menu" = "fuzzel";
     "$screen_locker" = "swaylock";
