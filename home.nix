@@ -96,6 +96,7 @@
   #  /etc/profiles/per-user/admin/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
+    PROMPT = "%1d@%m";
   };
 
   # Let Home Manager install and manage itself.

@@ -18,6 +18,8 @@
     inputs.home-manager.nixosModules.default
   ];
 
+  environment.pathsToLink = ["/share/zsh"];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -77,6 +79,8 @@
   };
 
   users.defaultUserShell = pkgs.zsh;
+  users.users.root.ignoreShellProgramCheck = true;
+  users.users.admin.ignoreShellProgramCheck = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
