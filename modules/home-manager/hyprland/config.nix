@@ -29,8 +29,6 @@
 
       follow_mouse = 1;
 
-      sensitivity = -0.1;
-
       touchpad = {
         natural_scroll = true;
         scroll_factor = 0.7;
