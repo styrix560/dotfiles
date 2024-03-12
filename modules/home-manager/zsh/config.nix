@@ -10,5 +10,8 @@
       l = "ls -l --group-directories-first";
       ls = "ls --color=tty";
     };
+    initExtra = ''
+      fpath+=~/dotfiles/modules/home-manager/zsh/.zfunc/_rustup
+    '';
   };
 }

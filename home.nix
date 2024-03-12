@@ -4,8 +4,8 @@
   ...
 }: {
   imports = [
-    ./modules/home-manager/hyprland.nix
-    ./modules/home-manager/zsh.nix
+    ./modules/home-manager/hyprland/config.nix
+    ./modules/home-manager/zsh/config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -96,7 +96,7 @@
   #  /etc/profiles/per-user/admin/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    PROMPT = "%1d@%m %~: ";
+    PROMPT = "%n@%m %~: ";
   };
 
   # Let Home Manager install and manage itself.
