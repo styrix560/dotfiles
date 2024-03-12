@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+# Edit this configuration file to define what should be installed on histor
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
@@ -87,12 +87,6 @@
 
   environment.localBinInPath = true;
 
-  programs.bash.shellAliases = {
-    ll = "ls -Alh --group-directories-first";
-    l = "ls -l --group-directories-first";
-    ls = "ls --color=tty";
-  };
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   environment.systemPackages = with pkgs; [
@@ -121,6 +115,19 @@
   ];
 
   programs.hyprland.enable = true;
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      ll = "ls -Alh --group-directories-first";
+      l = "ls -l --group-directories-first";
+      ls = "ls --color=tty";
+    };
+  };
 
   services.greetd = {
     enable = true;
