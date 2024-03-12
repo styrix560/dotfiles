@@ -115,6 +115,9 @@
 
     # spotify
     pkgs.spotify
+
+    # rustup
+    pkgs.rustup
   ];
 
   programs.hyprland.enable = true;
