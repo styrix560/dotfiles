@@ -1,4 +1,2 @@
 warning: Git tree '/home/admin/dotfiles' is dirty
-building the system configuration...
-warning: Git tree '/home/admin/dotfiles' is dirty
-error: cached failure of attribute 'nixosConfigurations.default.config.system.build.toplevel'
+error: interrupted by the user
