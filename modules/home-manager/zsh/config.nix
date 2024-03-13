@@ -13,5 +13,10 @@
     initExtra = ''
       fpath+=~/dotfiles/modules/home-manager/zsh/.zfunc/_rustup
     '';
+
+    oh-my-zsh = {
+      enable = true;
+      theme = "avit";
+    };
   };
 }
