@@ -6,8 +6,8 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      ll = "ls -Alh --group-directories-first";
-      l = "ls -l --group-directories-first";
+      ll = "ls -Alh";
+      l = "ls -l";
       ls = "ls --color=tty";
     };
     initExtra = ''
