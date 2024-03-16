@@ -124,6 +124,7 @@
 
     # perf
     pkgs.perf-tools
+    pkgs.linuxPackages_latest.perf
   ];
 
   programs.hyprland.enable = true;
