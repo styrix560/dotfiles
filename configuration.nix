@@ -121,6 +121,9 @@
 
     # rustup
     pkgs.rustup
+
+    # perf
+    pkgs.perf-tools
   ];
 
   programs.hyprland.enable = true;
