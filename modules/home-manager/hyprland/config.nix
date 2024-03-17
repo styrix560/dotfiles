@@ -85,9 +85,9 @@
       "$mainmod, b, exec, $browser"
       "$mainmod, f, fullscreen"
       "$mainmod, m, exec, $screen_locker"
-      "$mainmod, l, exec, $file_manager"
       "$mainmod, p, exec, $browser $nixpkgs"
       "$mainmod, q, killactive,"
+      "$mainmod, t, exec, $file_manager"
       "$mainmod, v, togglefloating,"
       "$mainmod shift, e, exit,"
 
