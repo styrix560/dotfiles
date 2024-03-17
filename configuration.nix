@@ -188,7 +188,6 @@
     pkgs.xfce.thunar
 
     # screen locking
-    pkgs.swaylock
     pkgs.swayidle
 
     # calculator

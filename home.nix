@@ -6,6 +6,7 @@
   imports = [
     ./modules/home-manager/hyprland/config.nix
     ./modules/home-manager/zsh/config.nix
+    ./modules/home-manager/swaylock/config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
