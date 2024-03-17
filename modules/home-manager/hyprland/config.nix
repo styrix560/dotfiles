@@ -7,6 +7,7 @@
     exec-once = [
       "mako"
       "waybar -c ~/dotfiles/waybar/waybar.conf"
+      "swayidle timeout 900 swaylock"
     ];
 
     # programs
