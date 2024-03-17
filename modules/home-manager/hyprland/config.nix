@@ -41,7 +41,7 @@
       gaps_out = 0;
       border_size = 2;
       "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-      "col.inactive_border" = "rgba(595959aa)";
+      "col.inactive_border" = "rgba(ff3eb022)";
 
       layout = "dwindle";
 
@@ -54,11 +54,7 @@
       rounding = true;
 
       blur = {
-        enabled = true;
-        size = 3;
-        passes = 1;
-        new_optimizations = true;
-        vibrancy = 0.1696;
+        enabled = false;
       };
 
       drop_shadow = true;
