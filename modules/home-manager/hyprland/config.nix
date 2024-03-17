@@ -15,6 +15,7 @@
     "$menu" = "fuzzel";
     "$screen_locker" = "swaylock";
 
+    "$nixpkgs" = "https://search.nixos.org/packages";
     # default env vars
     env = ["XCURSOR_SIZE,24" "QT_QPA_PLATFORMTHEME,qt5ct"];
 
@@ -79,13 +80,14 @@
     # example binds, see https://wiki.hyprland.org/configuring/binds/ for more
     bind = [
       "$mainmod, return, exec, $terminal"
-      "$mainmod, q, killactive,"
-      "$mainmod, m, exec, $screen_locker"
-      "$mainmod shift, e, exit,"
-      "$mainmod, v, togglefloating,"
-      "$mainmod, r, exec, $menu"
-      "$mainmod, f, fullscreen"
+      "$mainmod, a, exec, $menu"
       "$mainmod, b, exec, $browser"
+      "$mainmod, f, fullscreen"
+      "$mainmod, m, exec, $screen_locker"
+      "$mainmod, p, exec, $browser $nixpkgs"
+      "$mainmod, q, killactive,"
+      "$mainmod, v, togglefloating,"
+      "$mainmod shift, e, exit,"
 
       # move focus with mainmod + arrow keys
       "$mainmod, h, movefocus, l"
