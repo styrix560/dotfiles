@@ -99,7 +99,9 @@
     # npm
     nodejs_21
 
+    # neofetch
     neofetch
+
     # formatting .nix files
     pkgs.alejandra
 
@@ -123,8 +125,11 @@
     pkgs.rustup
 
     # perf
-    pkgs.perf-tools
+    # pkgs.perf-tools
     pkgs.linuxPackages_latest.perf
+
+    # vector icons
+    pkgs.font-awesome
   ];
 
   programs.hyprland.enable = true;
