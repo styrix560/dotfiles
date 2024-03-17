@@ -54,8 +54,30 @@
   sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
+
   security.pam.services.swaylock = {};
+
+  # authentication agent
   security.polkit.enable = true;
+
+  # let normal users
+  security.polkit.extraConfig = ''
+       polkit.addRule(function(action, subject) {
+      if (
+        subject.isInGroup("users")
+          && (
+            action.id == "org.freedesktop.login1.reboot" ||
+            action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+            action.id == "org.freedesktop.login1.power-off" ||
+            action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+          )
+        )
+      {
+        return polkit.Result.YES;
+      }
+    })
+  '';
+
   services.pipewire = {
     enable = true;
     alsa.enable = true;
