@@ -127,7 +127,8 @@
       "$mainmod shift, 9, movetoworkspace, 9"
       "$mainmod shift, 0, movetoworkspace, 10"
 
-      "mainMod, mouse:272, movewindow"
+      "mainmod, mouse:272, movewindow"
+      "mainmod, mouse:273, resizewindow"
     ];
   };
 }
