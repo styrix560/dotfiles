@@ -150,6 +150,9 @@
     # perf
     # pkgs.perf-tools
     pkgs.linuxPackages_latest.perf
+
+    # resource monitor
+    pkgs.btop
   ];
 
   fonts.packages = with pkgs; [
