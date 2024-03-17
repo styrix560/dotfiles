@@ -152,9 +152,6 @@
   system.stateVersion = "23.11"; # Did you read the comment?
 
   environment.systemPackages = with pkgs; [
-    # npm
-    nodejs_21
-
     # neofetch
     neofetch
 
