@@ -126,9 +126,10 @@
       "$mainmod shift, 8, movetoworkspace, 8"
       "$mainmod shift, 9, movetoworkspace, 9"
       "$mainmod shift, 0, movetoworkspace, 10"
-
-      "mainmod, mouse:272, movewindow"
-      "mainmod, mouse:273, resizewindow"
+    ];
+    bindm = [
+      "$mainmod, mouse:272, movewindow"
+      "$mainmod, mouse:273, resizewindow"
     ];
   };
 }
