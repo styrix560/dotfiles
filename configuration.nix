@@ -190,6 +190,9 @@
     # screen locking
     pkgs.swaylock
     pkgs.swayidle
+
+    # calculator
+    pkgs.bc
   ];
 
   fonts.packages = with pkgs; [
