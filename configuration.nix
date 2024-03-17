@@ -127,8 +127,9 @@
     # perf
     # pkgs.perf-tools
     pkgs.linuxPackages_latest.perf
+  ];
 
-    # vector icons
+  fonts.packages = with pkgs; [
     pkgs.font-awesome
   ];
 
