@@ -55,6 +55,7 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   security.pam.services.swaylock = {};
+  security.polkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
