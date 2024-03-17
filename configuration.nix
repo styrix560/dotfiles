@@ -192,6 +192,10 @@
 
     # calculator
     pkgs.bc
+
+    # desktop portals (to open file manager)
+    pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
   ];
 
   fonts.packages = with pkgs; [
