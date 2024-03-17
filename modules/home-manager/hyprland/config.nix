@@ -92,6 +92,10 @@
       "$mainmod, v, togglefloating,"
       "$mainmod shift, e, exit,"
 
+      # brightness
+      "$mainmod, =, exec brightnessctl 5%+"
+      "$mainmod, -, exec brightnessctl 5%-"
+
       # move focus with mainmod + arrow keys
       "$mainmod, h, movefocus, l"
       "$mainmod, l, movefocus, r"
