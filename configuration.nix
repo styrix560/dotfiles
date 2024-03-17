@@ -196,6 +196,9 @@
 
     # npm
     pkgs.nodejs_21
+
+    # brightness
+    pkgs.brightnessctl
   ];
 
   fonts.packages = with pkgs; [
