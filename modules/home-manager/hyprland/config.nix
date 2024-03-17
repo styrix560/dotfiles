@@ -68,11 +68,7 @@
     };
 
     animations = {
-      enabled = true;
-
-      bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
-
-      animation = [];
+      enabled = false;
     };
 
     dwindle = {
@@ -131,8 +127,7 @@
       "$mainmod shift, 9, movetoworkspace, 9"
       "$mainmod shift, 0, movetoworkspace, 10"
 
-      # example special workspace (scratchpad)
-      "$mainmod, s, togglespecialworkspace, magic"
+      "mainMod, mouse:272, movewindow"
     ];
   };
 }
