@@ -165,9 +165,6 @@
     pkgs.libnotify
     pkgs.mako
 
-    # screen locking
-    pkgs.swaylock
-
     # program starter
     pkgs.fuzzel
 
@@ -189,6 +186,10 @@
 
     # file manager
     pkgs.xfce.thunar
+
+    # screen locking
+    pkgs.swaylock
+    pkgs.swayidle
   ];
 
   fonts.packages = with pkgs; [
