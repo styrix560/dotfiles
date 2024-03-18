@@ -203,5 +203,6 @@
 
   fonts.packages = with pkgs; [
     pkgs.font-awesome
+    pkgs.jetbrains-mono
   ];
 }
