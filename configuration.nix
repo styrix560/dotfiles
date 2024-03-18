@@ -57,26 +57,32 @@
 
   security.pam.services.swaylock = {};
 
-  # authentication agent
-  security.polkit.enable = true;
-
-  # let normal users
-  security.polkit.extraConfig = ''
-       polkit.addRule(function(action, subject) {
-      if (
-        subject.isInGroup("users")
-          && (
-            action.id == "org.freedesktop.login1.reboot" ||
-            action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-            action.id == "org.freedesktop.login1.power-off" ||
-            action.id == "org.freedesktop.login1.power-off-multiple-sessions"
-          )
-        )
+  security.sudo = {
+    enable = true;
+    extraRules = [
       {
-        return polkit.Result.YES;
+        commands = [
+          {
+            command = "${pkgs.systemd}/bin/reboot";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "${pkgs.systemd}/bin/shutdown";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/home/admin/.local/bin/rebuild";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/home/admin/.local/bin/cleanup";
+            options = ["NOPASSWD"];
+          }
+        ];
+        groups = ["wheel"];
       }
-    })
-  '';
+    ];
+  };
 
   services.pipewire = {
     enable = true;
