@@ -93,8 +93,8 @@
       "$mainmod shift, e, exit,"
 
       # brightness
-      "$mainmod, i, exec, brightnessctl 5%+"
-      "$mainmod shift, i, exec, brightnessctl 5%-"
+      "$mainmod, i, exec, brightnessctl set 5%+"
+      "$mainmod shift, i, exec, brightnessctl set 5%-"
 
       # move focus with mainmod + arrow keys
       "$mainmod, h, movefocus, l"
