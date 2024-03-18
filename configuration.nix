@@ -199,6 +199,9 @@
 
     # brightness
     pkgs.brightnessctl
+
+    # fcron
+    pkgs.fcron
   ];
 
   fonts.packages = with pkgs; [
