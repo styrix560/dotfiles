@@ -91,7 +91,6 @@
     script = "cleanup > logs/cleanup.log";
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
     };
   };
 
