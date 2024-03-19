@@ -202,9 +202,6 @@
     # brightness
     pkgs.brightnessctl
 
-    # fcron
-    pkgs.fcron
-
     # flutter
     pkgs.flutter
 
