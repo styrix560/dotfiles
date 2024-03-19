@@ -55,9 +55,7 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
-  security.pam.services.swaylock = {
-    text = "auth include login";
-  };
+  security.pam.services.swaylock = {};
 
   security.sudo = {
     enable = true;
@@ -93,9 +91,11 @@
 
   systemd.services."cleanup" = {
     script = ''
-      /run/current-system/bin/switch-to-configuration boot
+      /run/current-system/sw/bin/nix-env nix/var/nix/profiles/per-user/eelco/profile --delete-generations 7d
 
       /run/current-system/sw/bin/nix-collect-garbage -d
+
+      /run/current-system/sw/bin/nix-store --optimise
     '';
     serviceConfig = {
       Type = "oneshot";
