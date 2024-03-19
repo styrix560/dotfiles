@@ -204,6 +204,9 @@
 
     # fcron
     pkgs.fcron
+
+    # flutter
+    pkgs.flutter
   ];
 
   fonts.packages = with pkgs; [
