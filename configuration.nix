@@ -208,7 +208,8 @@
     # flutter
     pkgs.flutter
 
-    # android sdk
+    # android
+    pkgs.android-studio
     pkgs.android-tools
   ];
 
