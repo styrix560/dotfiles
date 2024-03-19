@@ -12,6 +12,7 @@ in {
       vscodeExtensions = with vscode-extensions;
         [
           # known packages
+          matklad.rust-analyzer
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         ];

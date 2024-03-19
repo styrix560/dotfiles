@@ -3,6 +3,12 @@
   pkgs,
   ...
 }: {
+  imports = [
+    ./modules/home-manager/hyprland/config.nix
+    ./modules/home-manager/zsh/config.nix
+    ./modules/home-manager/swaylock/config.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "admin";
@@ -16,12 +22,26 @@
     };
   };
 
+  programs.firefox = {
+    enable = true;
+  };
+
   programs.vim = {
     enable = true;
     defaultEditor = true;
     extraConfig = ''
       set number
       set relativenumber
+    '';
+  };
+
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "JetBrainsMono";
+    };
+    extraConfig = ''
+      confirm_os_window_close 0
     '';
   };
 
@@ -80,7 +100,7 @@
   #  /etc/profiles/per-user/admin/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    PROMPT = "%n@%m %~: ";
   };
 
   # Let Home Manager install and manage itself.
