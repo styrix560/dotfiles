@@ -88,7 +88,7 @@
   };
 
   systemd.services."cleanup" = {
-    script = "cleanup > logs/cleanup.log";
+    script = "cleanup > ~/logs/cleanup.log";
     serviceConfig = {
       Type = "oneshot";
     };
