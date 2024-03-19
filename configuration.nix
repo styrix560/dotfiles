@@ -207,6 +207,9 @@
 
     # flutter
     pkgs.flutter
+
+    # android sdk
+    pkgs.android-tools
   ];
 
   fonts.packages = with pkgs; [
