@@ -91,7 +91,7 @@
     script = ''
       /run/current-system/bin/switch-to-configuration boot
 
-      nix-collect-garbage -d
+      /run/current-system/sw/bin/nix-collect-garbage -d
     '';
     serviceConfig = {
       Type = "oneshot";
