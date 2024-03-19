@@ -91,6 +91,7 @@
     script = "/home/admin/.local/bin/cleanup > /home/admin/logs/cleanup.log";
     serviceConfig = {
       Type = "oneshot";
+      User = "root";
     };
   };
 
