@@ -69,7 +69,7 @@
             options = ["NOPASSWD"];
           }
           {
-            command = "/home/admin/.local/bin/rebuild";
+            command = "/home/admin/.local/bin/cleanup";
             options = ["NOPASSWD"];
           }
         ];
@@ -88,7 +88,7 @@
   };
 
   systemd.services."cleanup" = {
-    script = "cleanup > ~/logs/cleanup.log";
+    script = "cleanup > /home/admin/logs/cleanup.log";
     serviceConfig = {
       Type = "oneshot";
     };
