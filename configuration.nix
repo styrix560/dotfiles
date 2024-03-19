@@ -86,7 +86,7 @@
   };
 
   systemd.services."cleanup" = {
-    script = "cleanup";
+    script = "cleanup > logs/cleanup.log";
     serviceConfig = {
       Type = "oneshot";
       User = "admin";
