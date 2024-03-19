@@ -88,7 +88,11 @@
   };
 
   systemd.services."cleanup" = {
-    script = "/home/admin/.local/bin/cleanup > /home/admin/logs/cleanup.log";
+    script = ''
+      /run/current-system/bin/switch-to-configuration boot
+
+      nix-collect-garbage -d
+    '';
     serviceConfig = {
       Type = "oneshot";
       User = "root";
