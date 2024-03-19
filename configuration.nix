@@ -55,8 +55,6 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
-  security.pam.services.swaylock = {};
-
   security.sudo = {
     enable = true;
     extraRules = [
@@ -68,6 +66,10 @@
           }
           {
             command = "${pkgs.systemd}/bin/shutdown";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/home/admin/.local/bin/rebuild";
             options = ["NOPASSWD"];
           }
         ];
