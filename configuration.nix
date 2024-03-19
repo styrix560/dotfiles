@@ -55,6 +55,10 @@
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
+  security.pam.services.swaylock = {
+    text = "auth include login";
+  };
+
   security.sudo = {
     enable = true;
     extraRules = [
