@@ -70,18 +70,27 @@
             command = "${pkgs.systemd}/bin/shutdown";
             options = ["NOPASSWD"];
           }
-          {
-            command = "/home/admin/.local/bin/rebuild";
-            options = ["NOPASSWD"];
-          }
-          {
-            command = "/home/admin/.local/bin/cleanup";
-            options = ["NOPASSWD"];
-          }
         ];
         groups = ["wheel"];
       }
     ];
+  };
+
+  systemd.timers."cleanup" = {
+    wantedBy = ["timers.target"];
+    timerConfig = {
+      OnCalendar = "daily";
+      Persistent = true;
+      Unit = "cleanup.service";
+    };
+  };
+
+  systemd.services."cleanup" = {
+    script = "cleanup";
+    serviceConfig = {
+      Type = "oneshot";
+      User = "admin";
+    };
   };
 
   services.pipewire = {
@@ -89,12 +98,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   nix.optimise.automatic = true;
