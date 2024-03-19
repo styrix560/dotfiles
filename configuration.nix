@@ -91,7 +91,7 @@
 
   systemd.services."cleanup" = {
     script = ''
-      /run/current-system/sw/bin/nix-env nix/var/nix/profiles/per-user/eelco/profile --delete-generations 7d
+      /run/current-system/sw/bin/nix-env --profile nix/var/nix/profiles/system --delete-generations 7d
 
       /run/current-system/sw/bin/nix-collect-garbage -d
 
@@ -109,8 +109,6 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  nix.optimise.automatic = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.admin = {
