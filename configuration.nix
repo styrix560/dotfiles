@@ -218,7 +218,7 @@
 
     # android
     pkgs.android-studio
-    pkgs.android-tools
+    # pkgs.android-tools
   ];
 
   fonts.packages = with pkgs; [
