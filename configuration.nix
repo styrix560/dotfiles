@@ -83,7 +83,7 @@
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
     timerConfig = {
-      OnCalendar = "daily";
+      OnCalendar = "weekly";
       Persistent = true;
       Unit = "cleanup.service";
     };
