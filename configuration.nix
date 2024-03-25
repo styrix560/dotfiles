@@ -184,8 +184,8 @@
     # screen locking
     pkgs.swayidle
 
-    # calculator
-    pkgs.bc
+    # python
+    pkgs.python3
 
     # npm
     pkgs.nodejs_21
