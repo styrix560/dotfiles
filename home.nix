@@ -7,6 +7,7 @@
     ./modules/home-manager/hyprland/config.nix
     ./modules/home-manager/zsh/config.nix
     ./modules/home-manager/swaylock/config.nix
+    ./modules/home-manager/nvim/config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -24,15 +25,6 @@
 
   programs.firefox = {
     enable = true;
-  };
-
-  programs.vim = {
-    enable = true;
-    defaultEditor = true;
-    extraConfig = ''
-      set number
-      set relativenumber
-    '';
   };
 
   programs.kitty = {
