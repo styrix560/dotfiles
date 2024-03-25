@@ -2,7 +2,7 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      Font.normal = {
+      font.normal = {
         family = "JetBrains Mono";
         style = "Regular";
       };
