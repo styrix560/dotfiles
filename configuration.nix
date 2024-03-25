@@ -74,7 +74,7 @@
     script = ''
       /run/current-system/sw/bin/nix-env --profile nix/var/nix/profiles/system --delete-generations 7d
 
-      /run/current-system/sw/bin/nix-collect-garbage -d
+      sudo /run/current-system/sw/bin/nix-collect-garbage -d
 
       /run/current-system/sw/bin/nix-store --optimise
     '';
@@ -173,7 +173,6 @@
     pkgs.rustup
 
     # perf
-    # pkgs.perf-tools
     pkgs.linuxPackages_latest.perf
 
     # resource monitor
@@ -198,7 +197,7 @@
     pkgs.flutter
 
     # android
-    pkgs.android-studio
+    #pkgs.android-studio
     #pkgs.android-tools
   ];
 
