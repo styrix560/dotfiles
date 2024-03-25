@@ -11,7 +11,7 @@
     ];
 
     # programs
-    "$terminal" = "kitty";
+    "$terminal" = "alacritty";
     "$browser" = "firefox";
     "$menu" = "fuzzel";
     "$screen_locker" = "swaylock";
