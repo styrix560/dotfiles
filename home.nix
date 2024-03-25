@@ -8,6 +8,7 @@
     ./modules/home-manager/zsh/config.nix
     ./modules/home-manager/swaylock/config.nix
     ./modules/home-manager/nvim/config.nix
+    ./modules/home-manager/alacritty/config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
