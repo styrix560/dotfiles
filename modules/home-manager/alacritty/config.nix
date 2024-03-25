@@ -1,9 +1,11 @@
 {
-  programs.alacritty.settings = {
+  programs.alacritty = {
     enable = true;
-    Font.normal = {
-      family = "JetBrains Mono";
-      style = "Regular";
+    settings = {
+      Font.normal = {
+        family = "JetBrains Mono";
+        style = "Regular";
+      };
     };
   };
 }
