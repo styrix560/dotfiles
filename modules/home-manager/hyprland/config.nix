@@ -6,7 +6,7 @@
 
     exec-once = [
       "mako"
-      "waybar -c ~/dotfiles/waybar/waybar.conf"
+      "waybar -c ~/dotfiles/waybar/waybar.conf --style ~/dotfiles/waybar/style.css"
       "swayidle timeout 900 swaylock"
     ];
 

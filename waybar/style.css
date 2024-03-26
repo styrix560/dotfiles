@@ -1,0 +1,41 @@
+* {
+	font-family: FontAwesome, Roboto;
+	font-size: 11px;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#mpd {
+    margin: 0 2px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: rgba(160, 182, 191, 0.25);
+}
+
+#battery.warning:not(.charging) {
+	background-color: #9e1313;
+}
+
+#battery.charging {
+	background-color: #33731d;
+}
+
+
+window#waybar {
+	background-color: rgba(0, 0, 0, 0);	
+}
+

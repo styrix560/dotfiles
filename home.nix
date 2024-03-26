@@ -13,8 +13,8 @@
 
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "admin";
   home.homeDirectory = "/home/admin";
+  home.username = "admin";
 
   programs.git = {
     enable = true;
