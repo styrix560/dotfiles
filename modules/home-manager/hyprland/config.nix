@@ -5,8 +5,8 @@
     monitor = ",preferred,auto,auto";
 
     exec-once = [
+      "waybar -c ~/dotfiles/waybar/waybar.conf -s ~/dotfiles/waybar/style.css > ~/logs/waybar.log"
       "mako"
-      "waybar -c ~/dotfiles/waybar/waybar.conf --style ~/dotfiles/waybar/style.css"
       "swayidle timeout 900 swaylock"
     ];
 

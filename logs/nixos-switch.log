@@ -1,4 +1,4 @@
 warning: Git tree '/home/admin/dotfiles' is dirty
-building the system configuration...
-warning: Git tree '/home/admin/dotfiles' is dirty
+error (ignored): error: interrupted by the user
+error (ignored): error: download of 'https://cache.nixos.org/1kql9l6sh9qwkfac720fl9a2d4lf78r3.narinfo' was interrupted
 error: interrupted by the user
