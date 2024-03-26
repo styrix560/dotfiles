@@ -28,16 +28,6 @@
     enable = true;
   };
 
-  programs.kitty = {
-    enable = true;
-    font = {
-      name = "JetBrainsMono";
-    };
-    extraConfig = ''
-      confirm_os_window_close 0
-    '';
-  };
-
   programs.bash = {
     enableCompletion = true;
   };
