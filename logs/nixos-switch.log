@@ -1,23 +1,35 @@
-activating the configuration...
-setting up /etc...
-reloading user units for admin...
-restarting sysinit-reactivation.target
-restarting the following units: home-manager-admin.service
-.zsh.enableAutosuggestions' defined in `/nix/store/ix58j3xxrap5cl8lkx88ihbrswng0w3k-source/modules/home-manager/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
-these 8 derivations will be built:
-  /nix/store/4r62r04acw67v29hbvqhgr0hb3c88q6p-hm_hyprhyprland.conf.drv
-  /nix/store/1y3rpdacn9bif88z5m9d9bg5agsra22a-home-manager-files.drv
-  /nix/store/2b76208sw80yb1kzcb1xybl96lrsjc08-activation-script.drv
-  /nix/store/d7ww76mgkyh587j1y8db1z7wpha3l50i-home-manager-generation.drv
-  /nix/store/bfx82brwq06g5w7ivq8lmd8m45vpciwm-unit-home-manager-admin.service.drv
-  /nix/store/q4bdf3mp0j731hyh7f553vwg3ykw8ppr-system-units.drv
-  /nix/store/bp4ddmxk01r8zw7kr1a683v61mdfwix4-etc.drv
-  /nix/store/za1p8p1j88419fpd6msrrnd3jxw10gp3-nixos-system-nixos-24.05.20240323.44d0940.drv
-building '/nix/store/4r62r04acw67v29hbvqhgr0hb3c88q6p-hm_hyprhyprland.conf.drv'...
-building '/nix/store/2b76208sw80yb1kzcb1xybl96lrsjc08-activation-script.drv'...
-building '/nix/store/1y3rpdacn9bif88z5m9d9bg5agsra22a-home-manager-files.drv'...
-building '/nix/store/d7ww76mgkyh587j1y8db1z7wpha3l50i-home-manager-generation.drv'...
-building '/nix/store/bfx82brwq06g5w7ivq8lmd8m45vpciwm-unit-home-manager-admin.service.drv'...
-building '/nix/store/q4bdf3mp0j731hyh7f553vwg3ykw8ppr-system-units.drv'...
-building '/nix/store/bp4ddmxk01r8zw7kr1a683v61mdfwix4-etc.drv'...
-building '/nix/store/za1p8p1j88419fpd6msrrnd3jxw10gp3-nixos-system-nixos-24.05.20240323.44d0940.drv'...
+warning: Git tree '/home/admin/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/admin/dotfiles' is dirty
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
+
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error:
+       Failed assertions:
+       - users.users.styrix.shell is set to zsh, but
+       programs.zsh.enable is not true. This will cause the zsh
+       shell to lack the basic nix directories in its PATH and might make
+       logging in as that user impossible. You can fix it with:
+       programs.zsh.enable = true;
+
+       If you know what you're doing and you are fine with the behavior,
+       set users.users.styrix.ignoreShellProgramCheck = true;
+       instead.

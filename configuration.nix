@@ -99,6 +99,13 @@
     packages = with pkgs; [];
   };
 
+  users.users.styrix = {
+    isNormalUser = true;
+    description = "me";
+    extraGroups = ["networkmanager" "wheel"];
+    packages = with pkgs; [];
+  };
+
   users.defaultUserShell = pkgs.zsh;
   users.users.root.ignoreShellProgramCheck = true;
   users.users.admin.ignoreShellProgramCheck = true;
