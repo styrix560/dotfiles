@@ -101,7 +101,7 @@
 
   users.users.styrix = {
     isNormalUser = true;
-    description = "me";
+    description = "styrix";
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
