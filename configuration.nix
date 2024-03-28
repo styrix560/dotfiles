@@ -109,6 +109,7 @@
   users.defaultUserShell = pkgs.zsh;
   users.users.root.ignoreShellProgramCheck = true;
   users.users.admin.ignoreShellProgramCheck = true;
+  users.users.styrix.ignoreShellProgramCheck = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

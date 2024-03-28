@@ -1,35 +1,33 @@
-warning: Git tree '/home/admin/dotfiles' is dirty
-building the system configuration...
-warning: Git tree '/home/admin/dotfiles' is dirty
-error:
-       … while calling the 'head' builtin
-
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
-
-         1540|         || pred here (elemAt values 1) (head values) then
-         1541|           head values
-             |           ^
-         1542|         else
-
-       … while evaluating the attribute 'value'
-
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
-
-          808|     in warnDeprecation opt //
-          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
-             |         ^
-          810|         inherit (res.defsFinal') highestPrio;
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error:
-       Failed assertions:
-       - users.users.styrix.shell is set to zsh, but
-       programs.zsh.enable is not true. This will cause the zsh
-       shell to lack the basic nix directories in its PATH and might make
-       logging in as that user impossible. You can fix it with:
-       programs.zsh.enable = true;
-
-       If you know what you're doing and you are fine with the behavior,
-       set users.users.styrix.ignoreShellProgramCheck = true;
-       instead.
+activating the configuration...
+setting up /etc...
+reloading user units for admin...
+restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: polkit.service
+the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
+en renamed to `programs.zsh.autosuggestion.enable'.
+these 12 derivations will be built:
+  /nix/store/n1q85454qbbaiggq5xh6r4m7775ifz1a-system-path.drv
+  /nix/store/mq3d4vlf6v8svj8z2p68db5rli4572cy-dbus-1.drv
+  /nix/store/7d3lnm9i7dn94km43dzx5pzpnf4qdqb9-X-Restart-Triggers-dbus.drv
+  /nix/store/3avjajz9ymm4m0v57gs7jz1dil00hi7a-unit-dbus.service.drv
+  /nix/store/7pyjq18f9zjwqhaqycybyhpvdscp7jsi-users-groups.json.drv
+  /nix/store/rs1djxb9h2lmr9al66r3w0g8lf4j23gv-X-Restart-Triggers-polkit.drv
+  /nix/store/yynpv0f8nai55jy5681ddjf6yr3a85x3-unit-polkit.service.drv
+  /nix/store/j5i9xl2jwljmdsrgxckgwn8cm53v3iqv-system-units.drv
+  /nix/store/zaq5bvifwab2xsv8vd31wywxz4dwxcib-unit-dbus.service.drv
+  /nix/store/xfma4swq5anddid59rxyzs2hppqh66b4-user-units.drv
+  /nix/store/q7r0a1c6ig3fxchm6hi5b66r4kq1zlng-etc.drv
+  /nix/store/arsfnbs8060gv55d5w7phi3wvng8vh22-nixos-system-nixos-24.05.20240323.44d0940.drv
+building '/nix/store/n1q85454qbbaiggq5xh6r4m7775ifz1a-system-path.drv'...
+building '/nix/store/7pyjq18f9zjwqhaqycybyhpvdscp7jsi-users-groups.json.drv'...
+building '/nix/store/rs1djxb9h2lmr9al66r3w0g8lf4j23gv-X-Restart-Triggers-polkit.drv'...
+building '/nix/store/mq3d4vlf6v8svj8z2p68db5rli4572cy-dbus-1.drv'...
+building '/nix/store/yynpv0f8nai55jy5681ddjf6yr3a85x3-unit-polkit.service.drv'...
+building '/nix/store/7d3lnm9i7dn94km43dzx5pzpnf4qdqb9-X-Restart-Triggers-dbus.drv'...
+building '/nix/store/3avjajz9ymm4m0v57gs7jz1dil00hi7a-unit-dbus.service.drv'...
+building '/nix/store/zaq5bvifwab2xsv8vd31wywxz4dwxcib-unit-dbus.service.drv'...
+building '/nix/store/j5i9xl2jwljmdsrgxckgwn8cm53v3iqv-system-units.drv'...
+building '/nix/store/xfma4swq5anddid59rxyzs2hppqh66b4-user-units.drv'...
+building '/nix/store/q7r0a1c6ig3fxchm6hi5b66r4kq1zlng-etc.drv'...
+building '/nix/store/arsfnbs8060gv55d5w7phi3wvng8vh22-nixos-system-nixos-24.05.20240323.44d0940.drv'...
