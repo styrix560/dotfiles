@@ -1,37 +1,30 @@
-activating the configuration...
-setting up /etc...
-reloading user units for admin...
-restarting sysinit-reactivation.target
-reloading the following units: dbus.service
-restarting the following units: polkit.service
-ed in `/nix/store/vmmp1j82qaam9zlqk3ckcddhfn3gl8bm-source/modules/home-manager/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
-these 11 derivations will be built:
-  /nix/store/cslvznf4dr685j551ibv15zivw6qi5fy-system-path.drv
-  /nix/store/a9gzvc27lb806wlvfjj0l7ybbj8igsvg-dbus-1.drv
-  /nix/store/r7f4z3bgm1hwpifjxhc174ggjx9vzkgw-X-Restart-Triggers-dbus.drv
-  /nix/store/j5kch2cpbnp46hrsxnp56ivv70k76bwc-unit-dbus.service.drv
-  /nix/store/94pcmxk1543jh3sm7z869ygj7kw1jm6z-user-units.drv
-  /nix/store/i3y7c6ap55jzsjb9amlhwj2qbp92qc7l-unit-dbus.service.drv
-  /nix/store/h8w59s3rlpfgz1cv5c011gzw4b5lcaw4-X-Restart-Triggers-polkit.drv
-  /nix/store/ibzmpbs6vd2v7z18448w8fv1wdq6knc9-unit-polkit.service.drv
-  /nix/store/ahxzk9wkmk00zh4z6zf2h2d8qiq64k3q-system-units.drv
-  /nix/store/qfninbnkjxd1ghibab1acczn6vvsl40y-etc.drv
-  /nix/store/2a0zhijdqp0sv4vxbcrmfxxi66i1nw4z-nixos-system-nixos-24.05.20240323.44d0940.drv
-these 3 paths will be fetched (0.43 MiB download, 2.13 MiB unpacked):
-  /nix/store/x1aqq14561lsgck9ii5dfibpf58jy7d9-gnumake-4.4.1
-  /nix/store/2mrrh6f51cncy67i3xxj1s2f4i99djwh-gnumake-4.4.1-info
-  /nix/store/1y6xvn5ff1b4h5vc0sx4kr0ad5h93viq-gnumake-4.4.1-man
-copying path '/nix/store/2mrrh6f51cncy67i3xxj1s2f4i99djwh-gnumake-4.4.1-info' from 'https://cache.nixos.org'...
-copying path '/nix/store/1y6xvn5ff1b4h5vc0sx4kr0ad5h93viq-gnumake-4.4.1-man' from 'https://cache.nixos.org'...
-copying path '/nix/store/x1aqq14561lsgck9ii5dfibpf58jy7d9-gnumake-4.4.1' from 'https://cache.nixos.org'...
-building '/nix/store/cslvznf4dr685j551ibv15zivw6qi5fy-system-path.drv'...
-building '/nix/store/h8w59s3rlpfgz1cv5c011gzw4b5lcaw4-X-Restart-Triggers-polkit.drv'...
-building '/nix/store/a9gzvc27lb806wlvfjj0l7ybbj8igsvg-dbus-1.drv'...
-building '/nix/store/ibzmpbs6vd2v7z18448w8fv1wdq6knc9-unit-polkit.service.drv'...
-building '/nix/store/r7f4z3bgm1hwpifjxhc174ggjx9vzkgw-X-Restart-Triggers-dbus.drv'...
-building '/nix/store/i3y7c6ap55jzsjb9amlhwj2qbp92qc7l-unit-dbus.service.drv'...
-building '/nix/store/j5kch2cpbnp46hrsxnp56ivv70k76bwc-unit-dbus.service.drv'...
-building '/nix/store/ahxzk9wkmk00zh4z6zf2h2d8qiq64k3q-system-units.drv'...
-building '/nix/store/94pcmxk1543jh3sm7z869ygj7kw1jm6z-user-units.drv'...
-building '/nix/store/qfninbnkjxd1ghibab1acczn6vvsl40y-etc.drv'...
-building '/nix/store/2a0zhijdqp0sv4vxbcrmfxxi66i1nw4z-nixos-system-nixos-24.05.20240323.44d0940.drv'...
+warning: Git tree '/home/admin/dotfiles' is dirty
+error:
+       … while calling the 'seq' builtin
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:322:18:
+
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          323|         _module = checked (config._module);
+
+       … while evaluating a branch condition
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:261:9:
+
+          260|       checkUnmatched =
+          261|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [] then
+             |         ^
+          262|           let
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: syntax error, unexpected UPDATE
+
+       at /nix/store/rx6bkm51xdf95pcj7fdd1qhvh68pzikj-source/configuration.nix:210:5:
+
+          209|     gcc9
+          210|     // cmakeMinimal
+             |     ^
+          211|     // gnumake
