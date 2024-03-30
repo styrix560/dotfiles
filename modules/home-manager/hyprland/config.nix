@@ -28,7 +28,7 @@
     input = {
       kb_layout = "us";
       kb_variant = "intl";
-      kb_options = "caps:swapescape";
+      kb_options = "";
 
       follow_mouse = 1;
 
