@@ -208,5 +208,6 @@
     # c tools
     gcc9
     cmakeMinimal
+    gnumake
   ];
 }
