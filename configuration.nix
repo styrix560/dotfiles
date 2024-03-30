@@ -206,8 +206,9 @@
     #pkgs.android-tools
 
     # c tools
-    gcc9
+    # gcc9
     # cmakeMinimal
     # gnumake
+    jetbrains.clion
   ];
 }
