@@ -199,6 +199,9 @@
     # android
     #pkgs.android-studio
     #pkgs.android-tools
+
+    # c compiler
+    gcc9
   ];
 
   fonts.packages = with pkgs; [
