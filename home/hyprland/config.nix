@@ -5,7 +5,7 @@
     monitor = ",preferred,auto,auto";
 
     exec-once = [
-      "waybar -c ~/dotfiles/waybar/waybar.conf -s ~/dotfiles/waybar/style.css"
+      "waybar -c ~/dotfiles/nixos/waybar/waybar.conf -s ~/dotfiles/nixos/waybar/style.css"
       "mako"
       "swayidle timeout 900 swaylock"
       "brightnessctl set 5%"
@@ -136,6 +136,9 @@
     bindm = [
       "$mainmod, mouse:272, movewindow"
       "$mainmod, mouse:273, resizewindow"
+    ];
+    bindl = [
+      ",switch:[switch name],exec,swaylock"
     ];
   };
 }
