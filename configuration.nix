@@ -133,6 +133,7 @@
 
   environment.etc."greetd/environments".text = ''
     Hyprland
+    alacritty
   '';
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
