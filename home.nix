@@ -4,11 +4,11 @@
   ...
 }: {
   imports = [
-    ./modules/home-manager/hyprland/config.nix
-    ./modules/home-manager/zsh/config.nix
-    ./modules/home-manager/swaylock/config.nix
-    ./modules/home-manager/nvim/config.nix
-    ./modules/home-manager/alacritty/config.nix
+    ./home/hyprland/config.nix
+    ./home/zsh/config.nix
+    ./home/swaylock/config.nix
+    ./home/nvim/config.nix
+    ./home/alacritty/config.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
