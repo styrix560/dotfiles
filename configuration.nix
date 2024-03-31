@@ -170,6 +170,7 @@
 
     # program starter
     pkgs.fuzzel
+    wofi
 
     # appbar
     pkgs.waybar
