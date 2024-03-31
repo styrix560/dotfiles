@@ -211,7 +211,5 @@
     # cmakeMinimal
     # gnumake
     jetbrains.clion
-
-    pkgs.i3
   ];
 }
