@@ -215,6 +215,6 @@
     pkgs.whatsapp-for-linux
 
     # file manager
-    pkgs.dolphin
+    libsForQt5.dolphin
   ];
 }
