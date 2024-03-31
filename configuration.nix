@@ -211,6 +211,10 @@
     # gnumake
     jetbrains.clion
 
+    # whatsapp
     pkgs.whatsapp-for-linux
+
+    # file manager
+    pkgs.dolphin
   ];
 }
