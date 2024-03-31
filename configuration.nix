@@ -12,7 +12,7 @@
     ./hardware-configuration.nix
 
     # vscode options
-    ./vscode/config.nix
+    ./nixos/vscode/config.nix
 
     # home manager
     inputs.home-manager.nixosModules.default
