@@ -86,13 +86,11 @@
       "$mainmod, a, exec, $menu"
 
       "$mainmod, b, exec, $browser"
-      "$mainmod, b, movetoworkspace, 2"
 
       "$mainmod, f, fullscreen"
       "$mainmod, m, exec, $screen_locker"
 
       "$mainmod, p, exec, $browser $nixpkgs"
-      "$mainmod, b, movetoworkspace, 2"
 
       "$mainmod, q, killactive,"
       "$mainmod, t, exec, $file_manager"
