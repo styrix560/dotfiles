@@ -8,6 +8,7 @@
       "waybar -c ~/dotfiles/waybar/waybar.conf -s ~/dotfiles/waybar/style.css"
       "mako"
       "swayidle timeout 900 swaylock"
+      "brightnessctl set 5%"
     ];
 
     # programs

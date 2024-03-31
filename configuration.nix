@@ -116,6 +116,8 @@
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  programs.thunar.enable = true;
+
   programs.hyprland.enable = true;
 
   services.greetd = {
@@ -183,9 +185,6 @@
 
     # resource monitor
     pkgs.btop
-
-    # file manager
-    pkgs.xfce.thunar
 
     # screen locking
     pkgs.swayidle
