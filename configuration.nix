@@ -211,5 +211,7 @@
     # cmakeMinimal
     # gnumake
     jetbrains.clion
+
+    pkgs.whatsapp-for-linux
   ];
 }
