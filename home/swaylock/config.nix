@@ -4,7 +4,6 @@
     settings = {
       color = "222222";
       show-failed-attempts = true;
-      show-keyboard-layout = true;
     };
   };
 }
