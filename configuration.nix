@@ -24,6 +24,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # enable x-server
+  services.xserver.enable = true;
+
   networking.hostName = "nixos";
 
   # Enable networking
