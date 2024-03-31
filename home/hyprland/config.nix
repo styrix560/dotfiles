@@ -84,9 +84,11 @@
     bind = [
       "$mainmod, return, exec, $terminal"
       "$mainmod, a, exec, $menu"
+      "$mainmod, b, workspace, 2"
       "$mainmod, b, exec, $browser"
       "$mainmod, f, fullscreen"
       "$mainmod, m, exec, $screen_locker"
+      "$mainmod, p, workspace, 2"
       "$mainmod, p, exec, $browser $nixpkgs"
       "$mainmod, q, killactive,"
       "$mainmod, t, exec, $file_manager"
