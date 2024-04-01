@@ -1,23 +1,31 @@
-activating the configuration...
-setting up /etc...
-reloading user units for admin...
-restarting sysinit-reactivation.target
-restarting the following units: home-manager-admin.service
-.zsh.enableAutosuggestions' defined in `/nix/store/vz4xgikwmx8nnhjv20sk0gxk79z7wq18-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
-these 8 derivations will be built:
-  /nix/store/1a2lbwcb8vbbilg32g9x36hly5a4g58v-hm_.confighyprhyprlock.conf.drv
-  /nix/store/skl5i2307q0ila1r4zvsazkh9pmmv3hc-activation-script.drv
-  /nix/store/z1riwkmxb7rdkkzq1v8gwhw9cxzsr3fy-home-manager-files.drv
-  /nix/store/8ra9bhn6h6c5r1is3zdbgl9rsfk92ngl-home-manager-generation.drv
-  /nix/store/2pczg0n9gq3064fc32nr5aw80wfmv590-unit-home-manager-admin.service.drv
-  /nix/store/sjx0lsxp444cz9gpl0k3hkkhqb0qdp2i-system-units.drv
-  /nix/store/kpvii9b31yygy3c7xf7ysq6kghczlsa2-etc.drv
-  /nix/store/fm4p6sb36p8v055qjfq01rh6ir69mnc0-nixos-system-nixos-24.05.20240323.44d0940.drv
-building '/nix/store/skl5i2307q0ila1r4zvsazkh9pmmv3hc-activation-script.drv'...
-building '/nix/store/1a2lbwcb8vbbilg32g9x36hly5a4g58v-hm_.confighyprhyprlock.conf.drv'...
-building '/nix/store/z1riwkmxb7rdkkzq1v8gwhw9cxzsr3fy-home-manager-files.drv'...
-building '/nix/store/8ra9bhn6h6c5r1is3zdbgl9rsfk92ngl-home-manager-generation.drv'...
-building '/nix/store/2pczg0n9gq3064fc32nr5aw80wfmv590-unit-home-manager-admin.service.drv'...
-building '/nix/store/sjx0lsxp444cz9gpl0k3hkkhqb0qdp2i-system-units.drv'...
-building '/nix/store/kpvii9b31yygy3c7xf7ysq6kghczlsa2-etc.drv'...
-building '/nix/store/fm4p6sb36p8v055qjfq01rh6ir69mnc0-nixos-system-nixos-24.05.20240323.44d0940.drv'...
+warning: Git tree '/home/admin/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/admin/dotfiles' is dirty
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
+
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: A definition for option `home-manager.users.admin.home.file."~/.config/hypr/hyprlock.conf".source' is not of type `path'. Definition values:
+       - In `/nix/store/131ccsjlfrdy21q3gad851pmni5b0jk7-source/home/hyprland/config.nix':
+           ''
+             image {
+               path = ~/desktop/wallpapers/dune_wallpaper.png
+             }
+           ''
