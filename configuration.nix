@@ -74,7 +74,7 @@
     script = ''
       /run/current-system/sw/bin/nix-env --profile nix/var/nix/profiles/system --delete-generations 7d
 
-      sudo /run/current-system/sw/bin/nix-collect-garbage -d
+      /run/current-system/sw/bin/nix-collect-garbage -d
 
       /run/current-system/sw/bin/nix-store --optimise
     '';
