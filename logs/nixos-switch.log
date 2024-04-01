@@ -1,31 +1,6 @@
-warning: Git tree '/home/admin/dotfiles' is dirty
-building the system configuration...
-warning: Git tree '/home/admin/dotfiles' is dirty
-error:
-       … while calling the 'head' builtin
-
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
-
-         1540|         || pred here (elemAt values 1) (head values) then
-         1541|           head values
-             |           ^
-         1542|         else
-
-       … while evaluating the attribute 'value'
-
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
-
-          808|     in warnDeprecation opt //
-          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
-             |         ^
-          810|         inherit (res.defsFinal') highestPrio;
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: A definition for option `home-manager.users.admin.home.file."~/.config/hypr/hyprlock.conf".source' is not of type `path'. Definition values:
-       - In `/nix/store/131ccsjlfrdy21q3gad851pmni5b0jk7-source/home/hyprland/config.nix':
-           ''
-             image {
-               path = ~/desktop/wallpapers/dune_wallpaper.png
-             }
-           ''
+activating the configuration...
+setting up /etc...
+reloading user units for admin...
+restarting sysinit-reactivation.target
+is dirty
+trace: warning: admin profile: The option `programs.zsh.enableAutosuggestions' defined in `/nix/store/vz4xgikwmx8nnhjv20sk0gxk79z7wq18-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
