@@ -1,17 +1,33 @@
-activating the configuration...
-setting up /etc...
-reloading user units for admin...
-restarting sysinit-reactivation.target
-the following new units were started: sysinit-reactivation.target, systemd-tmpfiles-resetup.service
-nix/store/ssijadvayl3kbj2z40r6fqwmqgkdmg0x-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
-these 5 derivations will be built:
-  /nix/store/hijjdk2vq4jjpx3hcncjwl2df4gbd7dp-unit-script-cleanup-start.drv
-  /nix/store/ass6p0h245x64j96jyn0ggjq6h96ihzg-unit-cleanup.service.drv
-  /nix/store/yrp4li1k32x9j57245wa71jmyshj2q35-system-units.drv
-  /nix/store/cz941lilyx0icm3l1pf09kg1lp9r4hbv-etc.drv
-  /nix/store/2ydbgg1b66y8fl8a95r1rbiplf5czag5-nixos-system-nixos-24.05.20240323.44d0940.drv
-building '/nix/store/hijjdk2vq4jjpx3hcncjwl2df4gbd7dp-unit-script-cleanup-start.drv'...
-building '/nix/store/ass6p0h245x64j96jyn0ggjq6h96ihzg-unit-cleanup.service.drv'...
-building '/nix/store/yrp4li1k32x9j57245wa71jmyshj2q35-system-units.drv'...
-building '/nix/store/cz941lilyx0icm3l1pf09kg1lp9r4hbv-etc.drv'...
-building '/nix/store/2ydbgg1b66y8fl8a95r1rbiplf5czag5-nixos-system-nixos-24.05.20240323.44d0940.drv'...
+warning: Git tree '/home/admin/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/admin/dotfiles' is dirty
+trace: warning: admin profile: The option `programs.zsh.enableAutosuggestions' defined in `/nix/store/d1nnjq12qisqyimrzdm7g6xs0hwsfz0j-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
+
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: undefined variable 'unstable'
+
+       at /nix/store/d1nnjq12qisqyimrzdm7g6xs0hwsfz0j-source/configuration.nix:192:5:
+
+          191|     pkgs.swayidle
+          192|     unstable.hyprlock
+             |     ^
+          193|
