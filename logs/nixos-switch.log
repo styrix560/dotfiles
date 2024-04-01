@@ -22,4 +22,10 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: string '~/dotfiles/home/hyprland/hyprlock.conf' doesn't represent an absolute path
+       error: A definition for option `home-manager.users.admin.home.file."~/.config/hypr/hyprlock.conf"' is not of type `submodule'. Definition values:
+       - In `/nix/store/l15kvyg6a81qgyv85fp39q66iwrkinl9-source/home/hyprland/config.nix':
+           ''
+             image {
+               path = ~/desktop/wallpapers/dune_wallpaper.png
+             }
+           ''

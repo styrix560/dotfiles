@@ -1,6 +1,6 @@
 {
   # link hyprlock.conf file
-  home.file."~/.config/hypr/hyprlock.conf" = builtins.readFile "~/dotfiles/home/hyprland/hyprlock.conf";
+  home.file."~/.config/hypr/hyprlock.conf" = builtins.readFile ./hyprlock.conf;
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
