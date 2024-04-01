@@ -6,7 +6,9 @@
   pkgs,
   inputs,
   ...
-}: let unstable = import <nixos-unstable> { config = {allowUnfree=true;};}; {
+}: let
+  unstable = import <nixos-unstable> {config = {allowUnfree = true;};};
+in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix

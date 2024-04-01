@@ -20,11 +20,4 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: syntax error, unexpected '{'
-
-       at /nix/store/ns4rg6gdljnq62ilrz09dr6irq4yd535-source/configuration.nix:9:77:
-
-            8|   ...
-            9| }: let unstable = import <nixos-unstable> { config = {allowUnfree=true;};}; {
-             |                                                                             ^
-           10|   imports = [
+       error: getting status of '/nix/store/hnhyla4qxmai4xijvq4b50if77lagx40-source/nixos/packages.nix': No such file or directory
