@@ -27,7 +27,7 @@
     };
 
     background = {
-      path = "/home/admin/desktop/wallpapers/dune_wallpaper.png"
+      path = "/home/admin/desktop/wallpapers/dune_wallpaper.png";
     };
 
     input = {
