@@ -145,9 +145,4 @@
       ",switch:Lid Switch,exec,swaylock"
     ];
   };
-  extraConfig = ''
-    image = {
-      path = "/home/admin/desktop/wallpapers/dune_wallpaper.png";
-    };
-  '';
 }
