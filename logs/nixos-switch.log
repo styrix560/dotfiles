@@ -1,28 +1,30 @@
 warning: Git tree '/home/admin/dotfiles' is dirty
-building the system configuration...
-warning: Git tree '/home/admin/dotfiles' is dirty
-trace: warning: admin profile: The option `programs.zsh.enableAutosuggestions' defined in `/nix/store/c1mh25h9xslbwvifnx6v4yrh06d7fxfq-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
 error:
-       … while calling the 'head' builtin
+       … while calling the 'seq' builtin
 
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:322:18:
 
-         1540|         || pred here (elemAt values 1) (head values) then
-         1541|           head values
-             |           ^
-         1542|         else
+          321|         options = checked options;
+          322|         config = checked (removeAttrs config [ "_module" ]);
+             |                  ^
+          323|         _module = checked (config._module);
 
-       … while evaluating the attribute 'value'
+       … while evaluating a branch condition
 
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:261:9:
 
-          808|     in warnDeprecation opt //
-          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+          260|       checkUnmatched =
+          261|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [] then
              |         ^
-          810|         inherit (res.defsFinal') highestPrio;
+          262|           let
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: cannot look up '<nixos-unstable>' in pure evaluation mode (use '--impure' to override)
+       error: syntax error, unexpected '{'
 
-       at «none»:0: (source not available)
+       at /nix/store/w7d6lswha5njdikpx4v6wfwzm06plzc2-source/configuration.nix:9:47:
+
+            8|   ...
+            9| }: let unstable = import <nixos-unstable> {}; {
+             |                                               ^
+           10|   imports = [
