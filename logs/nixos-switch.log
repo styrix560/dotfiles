@@ -22,9 +22,9 @@ error:
 
        error: syntax error, unexpected '{'
 
-       at /nix/store/w7d6lswha5njdikpx4v6wfwzm06plzc2-source/configuration.nix:9:47:
+       at /nix/store/ns4rg6gdljnq62ilrz09dr6irq4yd535-source/configuration.nix:9:77:
 
             8|   ...
-            9| }: let unstable = import <nixos-unstable> {}; {
-             |                                               ^
+            9| }: let unstable = import <nixos-unstable> { config = {allowUnfree=true;};}; {
+             |                                                                             ^
            10|   imports = [
