@@ -1,4 +1,7 @@
 {
+  # link hyprlock.conf file
+  home.file."~/.config/hypr/hyprlock.conf" = builtins.readFile "./hyprlock.conf"
+
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mainmod" = "SUPER";
