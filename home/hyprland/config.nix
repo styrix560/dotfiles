@@ -1,4 +1,4 @@
-{builtins, ...}: {
+{
   # link hyprlock.conf file
   home.file."~/.config/hypr/hyprlock.conf".text = builtins.readFile ./hyprlock.conf;
 
