@@ -22,4 +22,4 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: string './hyprlock.conf' doesn't represent an absolute path
+       error: string '~/dotfiles/home/hyprland/hyprlock.conf' doesn't represent an absolute path
