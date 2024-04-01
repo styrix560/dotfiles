@@ -20,11 +20,11 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: syntax error, unexpected ';', expecting end of file
+       error: undefined variable 'pkgs'
 
-       at /nix/store/p95ac7kl6zyfy9650pq7pa1hfh1ghsyr-source/nixos/packages.nix:7:2:
+       at /nix/store/rr54kqcpv6330aw33b11904xnnix6bck-source/nixos/packages.nix:4:37:
 
-            6|   ];
-            7| };
-             |  ^
-            8|
+            3| in {
+            4|   environment.systemPackages = with pkgs; [
+             |                                     ^
+            5|     unstable.hyprlock
