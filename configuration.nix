@@ -191,7 +191,7 @@ in {
 
     # screen locking
     pkgs.swayidle
-    unstable.hyprlock
+    pkgs.hyprlock
 
     # python
     pkgs.python3
