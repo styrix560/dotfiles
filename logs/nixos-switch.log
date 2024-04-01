@@ -1,23 +1,31 @@
-activating the configuration...
-setting up /etc...
-reloading user units for admin...
-restarting sysinit-reactivation.target
-restarting the following units: home-manager-admin.service
-.zsh.enableAutosuggestions' defined in `/nix/store/39p86c00qwfd1hj1ag8v3y55awxvazbq-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
-these 8 derivations will be built:
-  /nix/store/g3fbdidg2va4wzgh8w3j048gf7vyvap4-hm_hyprhyprland.conf.drv
-  /nix/store/f8b21kajvc8znvm6sbyj4rrq48nddckv-home-manager-files.drv
-  /nix/store/jb3hxwj48w3bilz7s6i6lm7ivnhylsbp-activation-script.drv
-  /nix/store/qvrspws96jhg2rychqglrgbspfv636pg-home-manager-generation.drv
-  /nix/store/7z09fxy2kw990q4vkgvsvk7mrdsbyv4w-unit-home-manager-admin.service.drv
-  /nix/store/7ps6bcrphs3mfx3j41d9ksijydqfhx5k-system-units.drv
-  /nix/store/zpl07156661qff2s88swfcpmk0rdg9xm-etc.drv
-  /nix/store/360ddwr3wi60myvdbmhsss6mwm76p51h-nixos-system-nixos-24.05.20240323.44d0940.drv
-building '/nix/store/g3fbdidg2va4wzgh8w3j048gf7vyvap4-hm_hyprhyprland.conf.drv'...
-building '/nix/store/jb3hxwj48w3bilz7s6i6lm7ivnhylsbp-activation-script.drv'...
-building '/nix/store/f8b21kajvc8znvm6sbyj4rrq48nddckv-home-manager-files.drv'...
-building '/nix/store/qvrspws96jhg2rychqglrgbspfv636pg-home-manager-generation.drv'...
-building '/nix/store/7z09fxy2kw990q4vkgvsvk7mrdsbyv4w-unit-home-manager-admin.service.drv'...
-building '/nix/store/7ps6bcrphs3mfx3j41d9ksijydqfhx5k-system-units.drv'...
-building '/nix/store/zpl07156661qff2s88swfcpmk0rdg9xm-etc.drv'...
-building '/nix/store/360ddwr3wi60myvdbmhsss6mwm76p51h-nixos-system-nixos-24.05.20240323.44d0940.drv'...
+warning: Git tree '/home/admin/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/admin/dotfiles' is dirty
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
+
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
+
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          810|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: The option `home-manager.users.admin.extraConfig' does not exist. Definition values:
+       - In `/nix/store/ffa1147mw67lbjcpq03vy8qqh0n4q4ym-source/home/hyprland/config.nix':
+           ''
+             image = {
+               path = "/home/admin/desktop/wallpapers/dune_wallpaper.png";
+             };
+           ''
