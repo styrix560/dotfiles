@@ -1,23 +1,28 @@
 warning: Git tree '/home/admin/dotfiles' is dirty
+building the system configuration...
+warning: Git tree '/home/admin/dotfiles' is dirty
+trace: warning: admin profile: The option `programs.zsh.enableAutosuggestions' defined in `/nix/store/zxzf28kcix13ck35xxjs9xkxjj0ii6sc-source/home/zsh/config.nix' has been renamed to `programs.zsh.autosuggestion.enable'.
 error:
-       … while calling the 'seq' builtin
+       … while calling the 'head' builtin
 
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:322:18:
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/attrsets.nix:1541:11:
 
-          321|         options = checked options;
-          322|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          323|         _module = checked (config._module);
+         1540|         || pred here (elemAt values 1) (head values) then
+         1541|           head values
+             |           ^
+         1542|         else
 
-       … while evaluating a branch condition
+       … while evaluating the attribute 'value'
 
-         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:261:9:
+         at /nix/store/amxd2p02wx78nyaa4bkb0hjvgwhz1dq7-source/lib/modules.nix:809:9:
 
-          260|       checkUnmatched =
-          261|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [] then
+          808|     in warnDeprecation opt //
+          809|       { value = builtins.addErrorContext "while evaluating the option `${showOption loc}':" value;
              |         ^
-          262|           let
+          810|         inherit (res.defsFinal') highestPrio;
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: getting status of '/nix/store/hnhyla4qxmai4xijvq4b50if77lagx40-source/nixos/packages.nix': No such file or directory
+       error: cannot look up '<nixos-unstable>' in pure evaluation mode (use '--impure' to override)
+
+       at «none»:0: (source not available)
