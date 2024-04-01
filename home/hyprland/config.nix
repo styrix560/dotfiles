@@ -26,6 +26,10 @@
       force_zero_scaling = true;
     };
 
+    background = {
+      path = "/home/admin/desktop/wallpapers/dune_wallpaper.png"
+    };
+
     input = {
       kb_layout = "us";
       kb_variant = "intl";
