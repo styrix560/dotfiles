@@ -26,7 +26,7 @@
       force_zero_scaling = true;
     };
 
-    background = {
+    image = {
       path = "/home/admin/desktop/wallpapers/dune_wallpaper.png";
     };
 
