@@ -66,7 +66,7 @@ in {
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
     timerConfig = {
-      OnCalendar = "weekly";
+      OnCalendar = "daily";
       Persistent = true;
       Unit = "cleanup.service";
     };
@@ -164,46 +164,46 @@ in {
     neofetch
 
     # formatting .nix files
-    pkgs.alejandra
+    alejandra
 
     # alertdialogs
-    pkgs.libnotify
-    pkgs.mako
+    libnotify
+    mako
 
     # program starter
-    pkgs.fuzzel
+    fuzzel
     wofi
 
     # appbar
-    pkgs.waybar
+    waybar
 
     # spotify
-    pkgs.spotify
+    spotify
 
     # rustup
-    pkgs.rustup
+    rustup
 
     # perf
-    pkgs.linuxPackages_latest.perf
+    linuxPackages_latest.perf
 
     # resource monitor
-    pkgs.btop
+    btop
 
     # screen locking
-    pkgs.swayidle
-    pkgs.hyprlock
+    swayidle
+    hyprlock
 
     # python
-    pkgs.python3
+    python3
 
     # npm
-    pkgs.nodejs_21
+    nodejs_21
 
     # brightness
-    pkgs.brightnessctl
+    brightnessctl
 
     # flutter
-    pkgs.flutter
+    flutter
 
     # android
     #pkgs.android-studio
@@ -216,7 +216,7 @@ in {
     jetbrains.clion
 
     # whatsapp
-    pkgs.whatsapp-for-linux
+    whatsapp-for-linux
 
     # file manager
     # libsForQt5.dolphin
