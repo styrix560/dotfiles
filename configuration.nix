@@ -159,67 +159,69 @@ in {
     pkgs.jetbrains-mono
   ];
 
-  environment.systemPackages = with pkgs; [
-    # neofetch
-    neofetch
+  environment.systemPackages = with pkgs;
+    [
+      # neofetch
+      neofetch
 
-    # formatting .nix files
-    alejandra
+      # formatting .nix files
+      alejandra
 
-    # alertdialogs
-    libnotify
-    mako
+      # alertdialogs
+      libnotify
+      mako
 
-    # program starter
-    fuzzel
-    wofi
+      # program starter
+      fuzzel
+      wofi
 
-    # appbar
-    waybar
+      # appbar
+      waybar
 
-    # spotify
-    spotify
+      # spotify
+      spotify
 
-    # rustup
-    rustup
+      # rustup
+      rustup
 
-    # perf
-    linuxPackages_latest.perf
+      # perf
+      linuxPackages_latest.perf
 
-    # resource monitor
-    btop
+      # resource monitor
+      btop
 
-    # screen locking
-    swayidle
-    hyprlock
+      # screen locking
+      swayidle
+      hyprlock
 
-    # python
-    python3
+      # python
+      python3
 
-    # npm
-    nodejs_21
+      # npm
+      nodejs_21
 
-    # brightness
-    brightnessctl
+      # brightness
+      brightnessctl
 
-    # flutter
-    flutter
+      # flutter
+      flutter
 
-    # android
-    #pkgs.android-studio
-    #pkgs.android-tools
+      # android
+      #pkgs.android-studio
+      #pkgs.android-tools
 
-    # c tools
-    # gcc9
-    # cmakeMinimal
-    # gnumake
-    jetbrains.clion
+      # c tools
+      # gcc9
+      # cmakeMinimal
+      # gnumake
+      jetbrains.clion
 
-    # whatsapp
-    whatsapp-for-linux
+      # whatsapp
+      whatsapp-for-linux
 
-    # file manager
-    # libsForQt5.dolphin
-    libsForQt5.filelight
-  ] ++ with unstable; [];
+      # file manager
+      # libsForQt5.dolphin
+      libsForQt5.filelight
+    ]
+    ++ (with unstable; []);
 }
