@@ -118,9 +118,25 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-  programs.thunar.enable = true;
+  # start of window manager
 
   programs.hyprland.enable = true;
+
+  services.xserver = {
+    enable = true;
+
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks # is the package manager for Lua modules
+        luadbi-mysql # Database abstraction layer
+      ];
+    };
+  };
+
+  # end of window manager
+
+  programs.thunar.enable = true;
 
   services.greetd = {
     enable = true;
