@@ -2,7 +2,7 @@
   # link hyprlock.conf file
   home.file."~/.config/hypr/hyprlock.conf".source = ./hyprlock.conf;
 
-  wayland.windowManager.hyprland.enable = false;
+  wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = {
     "$mainmod" = "SUPER";
     monitor = ",preferred,auto,auto";
