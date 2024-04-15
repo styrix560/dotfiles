@@ -120,8 +120,6 @@ in {
 
   # start of window manager
 
-  programs.hyprland.enable = true;
-
   services.xserver = {
     enable = true;
 
