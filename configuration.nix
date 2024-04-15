@@ -152,7 +152,7 @@ in {
 
   environment.etc."greetd/environments".text = ''
     Hyprland
-    alacritty
+    awesome
   '';
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
