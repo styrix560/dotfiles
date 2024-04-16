@@ -142,7 +142,7 @@ in {
                     --time \
                --asterisks \
                --user-menu \
-               --cmd 'Hyprland'
+               --cmd 'startxfce4'
       '';
     };
   };
