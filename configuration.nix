@@ -120,8 +120,6 @@ in {
 
   # start of window manager
 
-  programs.hyprland.enable = true;
-
   services.xserver = {
     enable = true;
 
@@ -242,6 +240,9 @@ in {
       # file manager
       # libsForQt5.dolphin
       libsForQt5.filelight
+
+      # window manager
+      awesome
     ]
     ++ (with unstable; []);
 }
