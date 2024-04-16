@@ -234,6 +234,8 @@ in {
       # file manager
       # libsForQt5.dolphin
       libsForQt5.filelight
+
+      xorg.xinit
     ]
     ++ (with unstable; []);
 }
