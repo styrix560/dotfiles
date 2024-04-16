@@ -125,7 +125,7 @@ in {
 
     displayManager = {
       sddm.enable = true;
-      defaultSession = "none+awesome";
+      defaultSession = "awesome";
     };
 
     windowManager.awesome = {
