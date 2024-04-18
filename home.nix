@@ -4,7 +4,7 @@
   ...
 }: {
   imports = [
-    ./home/hyprland/config.nix
+    ./home/awesome/config.nix
     ./home/zsh/config.nix
     ./home/swaylock/config.nix
     ./home/nvim/config.nix
