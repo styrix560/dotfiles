@@ -242,8 +242,7 @@ in {
 
       xorg.xinit
 
-      # for lua something
-      luajitPackages.luadbi
+      lua
     ]
     ++ (with unstable; []);
 }
