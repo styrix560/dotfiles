@@ -123,18 +123,12 @@ in {
 
   services.xserver = {
     enable = true;
-    displayManager = {
-      sddm.enable = true;
-      defaultSession = "none+awesome";
-    };
 
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks
-        luadbi-mysql
-      ];
+    desktopManager = {
+      xterm.enable = false;
+      xfce.enable = true;
     };
+    displayManager.defaultSession = "xfce";
   };
 
   # end of window manager
@@ -154,7 +148,6 @@ in {
 
   environment.etc."greetd/environments".text = ''
     Hyprland
-    awesome
   '';
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
