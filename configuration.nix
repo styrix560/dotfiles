@@ -120,15 +120,15 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # start of window manager
-
   services.xserver = {
-    enable = true;
-
-    desktopManager = {
-      xterm.enable = false;
-      xfce.enable = true;
+    displayManager.startx.enable = true;
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks
+        luadbi-mysql
+      ];
     };
-    displayManager.defaultSession = "xfce";
   };
 
   # end of window manager
