@@ -241,6 +241,9 @@ in {
       libsForQt5.filelight
 
       xorg.xinit
+
+      # for lua something
+      luajitPackages.luadbi
     ]
     ++ (with unstable; []);
 }
