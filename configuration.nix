@@ -63,25 +63,6 @@ in {
     enable = true;
     wheelNeedsPassword = false;
   };
-  extraRules = [
-    {
-      commands = [
-        {
-          command = "${pkgs.systemd}/bin/reboot";
-          options = ["NOPASSWD"];
-        }
-        {
-          command = "${pkgs.systemd}/bin/shutdown";
-          options = ["NOPASSWD"];
-        }
-        {
-          command = "/home/admin/.local/bin/cleanup";
-          options = ["NOPASSWD"];
-        }
-      ];
-      groups = ["wheel"];
-    }
-  ];
 
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
