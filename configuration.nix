@@ -124,7 +124,7 @@ in {
     displayManager.startx.enable = true;
     windowManager.awesome = {
       enable = true;
-      luaModules = with pkgs.luaPackages; [
+      luaModules = with pkgs.lua51Packages; [
         luarocks
         luadbi-mysql
       ];
