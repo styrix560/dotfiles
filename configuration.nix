@@ -125,7 +125,6 @@ in {
     windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.lua51Packages; [
-        luadbi
         luarocks
         luadbi-mysql
       ];
