@@ -190,59 +190,6 @@ in {
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
-  environment.systemPackages = with pkgs; [
-    # neofetch
-    neofetch
-
-    # formatting .nix files
-    pkgs.alejandra
-
-    # alertdialogs
-    pkgs.libnotify
-    pkgs.mako
-
-    # program starter
-    pkgs.fuzzel
-
-    # appbar
-    pkgs.waybar
-
-    # spotify
-    pkgs.spotify
-
-    # rustup
-    pkgs.rustup
-
-    # perf
-    # pkgs.perf-tools
-    pkgs.linuxPackages_latest.perf
-
-    # resource monitor
-    pkgs.btop
-
-    # file manager
-    pkgs.xfce.thunar
-
-    # screen locking
-    pkgs.swayidle
-
-    # calculator
-    pkgs.bc
-
-    # npm
-    pkgs.nodejs_21
-
-    # brightness
-    pkgs.brightnessctl
-
-    # flutter
-    pkgs.flutter
-
-    # android
-    pkgs.android-studio
-    pkgs.android-tools
-  ];
-
   fonts.packages = with pkgs; [
     pkgs.font-awesome
     pkgs.jetbrains-mono
