@@ -82,7 +82,6 @@ in {
         groups = ["wheel"];
       }
     ];
-  };
 
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
