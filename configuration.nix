@@ -127,6 +127,7 @@ in {
       luaModules = with pkgs.lua51Packages; [
         luarocks
         luadbi-mysql
+        luadbi
       ];
     };
   };
