@@ -61,8 +61,32 @@ in {
 
   security.sudo = {
     enable = true;
+<<<<<<< HEAD
     wheelNeedsPassword = false;
   };
+=======
+    extraRules = [
+      {
+        commands = [
+          {
+            command = "${pkgs.systemd}/bin/reboot";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "${pkgs.systemd}/bin/shutdown";
+            options = ["NOPASSWD"];
+          }
+          {
+            command = "/home/admin/.local/bin/cleanup";
+            options = ["NOPASSWD"];
+          }
+        ];
+        groups = ["wheel"];
+      }
+    ];
+  };
+
+>>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
     timerConfig = {
@@ -118,6 +142,7 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+<<<<<<< HEAD
   # start of window manager
 
   services.xserver = {
@@ -133,6 +158,9 @@ in {
   # end of window manager
 
   programs.thunar.enable = true;
+=======
+  programs.hyprland.enable = true;
+>>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
 
   services.greetd = {
     enable = true;
@@ -142,7 +170,11 @@ in {
                     --time \
                --asterisks \
                --user-menu \
+<<<<<<< HEAD
                --cmd 'startxfce4'
+=======
+               --cmd 'Hyprland'
+>>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
       '';
     };
   };
@@ -166,10 +198,67 @@ in {
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
+<<<<<<< HEAD
+=======
+  environment.systemPackages = with pkgs; [
+    # neofetch
+    neofetch
+
+    # formatting .nix files
+    pkgs.alejandra
+
+    # alertdialogs
+    pkgs.libnotify
+    pkgs.mako
+
+    # program starter
+    pkgs.fuzzel
+
+    # appbar
+    pkgs.waybar
+
+    # spotify
+    pkgs.spotify
+
+    # rustup
+    pkgs.rustup
+
+    # perf
+    # pkgs.perf-tools
+    pkgs.linuxPackages_latest.perf
+
+    # resource monitor
+    pkgs.btop
+
+    # file manager
+    pkgs.xfce.thunar
+
+    # screen locking
+    pkgs.swayidle
+
+    # calculator
+    pkgs.bc
+
+    # npm
+    pkgs.nodejs_21
+
+    # brightness
+    pkgs.brightnessctl
+
+    # flutter
+    pkgs.flutter
+
+    # android
+    pkgs.android-studio
+    pkgs.android-tools
+  ];
+
+>>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
   fonts.packages = with pkgs; [
     pkgs.font-awesome
     pkgs.jetbrains-mono
   ];
+<<<<<<< HEAD
 
   environment.systemPackages = with pkgs;
     [
@@ -238,4 +327,6 @@ in {
       xorg.xinit
     ]
     ++ (with unstable; []);
+=======
+>>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
 }
