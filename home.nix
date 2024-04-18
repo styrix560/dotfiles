@@ -4,17 +4,11 @@
   ...
 }: {
   imports = [
-<<<<<<< HEAD
     ./home/hyprland/config.nix
     ./home/zsh/config.nix
     ./home/swaylock/config.nix
     ./home/nvim/config.nix
     ./home/alacritty/config.nix
-=======
-    ./modules/home-manager/hyprland/config.nix
-    ./modules/home-manager/zsh/config.nix
-    ./modules/home-manager/swaylock/config.nix
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -31,24 +25,7 @@
   };
 
   programs.firefox = {
-<<<<<<< HEAD
-=======
     enable = true;
-  };
-
-  programs.vim = {
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
-    enable = true;
-  };
-
-  programs.kitty = {
-    enable = true;
-    font = {
-      name = "JetBrainsMono";
-    };
-    extraConfig = ''
-      confirm_os_window_close 0
-    '';
   };
 
   programs.bash = {
