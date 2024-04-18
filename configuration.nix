@@ -235,7 +235,7 @@ in {
 
       xorg.xinit
 
-      lua
+      lua51Packages.lua
     ]
     ++ (with unstable; []);
 }
