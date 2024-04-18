@@ -61,10 +61,8 @@ in {
 
   security.sudo = {
     enable = true;
-<<<<<<< HEAD
     wheelNeedsPassword = false;
   };
-=======
     extraRules = [
       {
         commands = [
@@ -86,7 +84,6 @@ in {
     ];
   };
 
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
   systemd.timers."cleanup" = {
     wantedBy = ["timers.target"];
     timerConfig = {
@@ -142,25 +139,25 @@ in {
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
-<<<<<<< HEAD
   # start of window manager
 
   services.xserver = {
     enable = true;
+    displayManager = {
+      sddm.enable = true;
+      defaultSession = "none+awesome";
+    }
 
-    desktopManager = {
-      xfce.enable = true;
-      xterm.enable = false;
+    windowManager.awesome = {
+      enable = true;
+      luaModules = with pkgs.luaPackages; [
+        luarocks
+        luadbi-mysql
+      ];
     };
-    displayManager.defaultSession = "xfce";
   };
 
   # end of window manager
-
-  programs.thunar.enable = true;
-=======
-  programs.hyprland.enable = true;
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
 
   services.greetd = {
     enable = true;
@@ -170,11 +167,7 @@ in {
                     --time \
                --asterisks \
                --user-menu \
-<<<<<<< HEAD
                --cmd 'startxfce4'
-=======
-               --cmd 'Hyprland'
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
       '';
     };
   };
@@ -198,8 +191,6 @@ in {
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.11"; # Did you read the comment?
 
-<<<<<<< HEAD
-=======
   environment.systemPackages = with pkgs; [
     # neofetch
     neofetch
@@ -253,12 +244,10 @@ in {
     pkgs.android-tools
   ];
 
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
   fonts.packages = with pkgs; [
     pkgs.font-awesome
     pkgs.jetbrains-mono
   ];
-<<<<<<< HEAD
 
   environment.systemPackages = with pkgs;
     [
@@ -327,6 +316,4 @@ in {
       xorg.xinit
     ]
     ++ (with unstable; []);
-=======
->>>>>>> e448dfb0f070ceb4bc05f87f249322b7feecba20
 }
