@@ -234,8 +234,6 @@ in {
       libsForQt5.filelight
 
       xorg.xinit
-
-      lua51Packages.lua
     ]
     ++ (with unstable; []);
 }
