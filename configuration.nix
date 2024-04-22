@@ -230,6 +230,7 @@ in {
       libsForQt5.filelight
 
       xorg.xinit
+      xterm
     ]
     ++ (with unstable; []);
 }
