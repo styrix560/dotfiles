@@ -125,7 +125,6 @@ in {
       enable = true;
       luaModules = with pkgs.lua51Packages; [
         luarocks
-        luadbi-mysql
       ];
     };
   };
@@ -140,14 +139,11 @@ in {
                     --time \
                --asterisks \
                --user-menu \
-               --cmd 'startxfce4'
+               --cmd 'zsh'
       '';
     };
   };
 
-  environment.etc."greetd/environments".text = ''
-    Hyprland
-  '';
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
     users = {
