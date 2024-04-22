@@ -122,7 +122,6 @@ in {
   # start of window manager
   services.xserver = {
     displayManager.startx.enable = true;
-    windowManager.awesome = {
       enable = true;
       luaModules = with pkgs.lua51Packages; [
         luarocks
