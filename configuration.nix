@@ -123,7 +123,7 @@ in {
   services.xserver = {
     displayManager.startx.enable = true;
     enable = true;
-    luaModules = with pkgs.lua51Packages; [
+    luaModules = with pkgs.luaPackages; [
       luarocks
     ];
   };
