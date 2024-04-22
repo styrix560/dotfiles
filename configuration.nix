@@ -122,11 +122,10 @@ in {
   # start of window manager
   services.xserver = {
     displayManager.startx.enable = true;
-      enable = true;
-      luaModules = with pkgs.lua51Packages; [
-        luarocks
-      ];
-    };
+    enable = true;
+    luaModules = with pkgs.lua51Packages; [
+      luarocks
+    ];
   };
 
   # end of window manager
