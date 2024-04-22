@@ -231,6 +231,7 @@ in {
 
       xorg.xinit
       xterm
+      xorg.xauth
     ]
     ++ (with unstable; []);
 }
