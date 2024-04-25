@@ -120,15 +120,6 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # start of window manager
-  services.xserver = {
-    displayManager.startx.enable = true;
-    windowManager.awesome = {
-      enable = true;
-      luaModules = with pkgs.luaPackages; [
-        luarocks
-      ];
-    };
-  };
 
   # end of window manager
 
