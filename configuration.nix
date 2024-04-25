@@ -213,9 +213,7 @@ in {
       # libsForQt5.dolphin
       libsForQt5.filelight
 
-      xorg.xinit
-      xterm
-      xorg.xauth
+      gnome3.gnome-tweaks
     ]
     ++ (with unstable; []);
 }
