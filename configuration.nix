@@ -216,6 +216,8 @@ in {
       gnome3.gnome-tweaks
 
       discord
+
+      android-studio
     ]
     ++ (with unstable; []);
 }
