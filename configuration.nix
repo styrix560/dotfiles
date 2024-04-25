@@ -214,6 +214,8 @@ in {
       libsForQt5.filelight
 
       gnome3.gnome-tweaks
+
+      discord
     ]
     ++ (with unstable; []);
 }
