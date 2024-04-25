@@ -120,21 +120,12 @@ in {
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # start of window manager
-
-  # end of window manager
-
-  services.greetd = {
+  services.xserver = {
     enable = true;
-    settings = {
-      default_session.command = ''
-        ${pkgs.greetd.tuigreet}/bin/tuigreet \
-                    --time \
-               --asterisks \
-               --user-menu \
-               --cmd 'zsh'
-      '';
-    };
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
   };
+  # end of window manager
 
   home-manager = {
     extraSpecialArgs = {inherit inputs;};
