@@ -131,8 +131,8 @@ in {
       gnome-tour
     ])
     ++ (with pkgs.gnome; [
-      gnome-music
       gnome-terminal
+      gnome-music
       gedit
       epiphany
       geary
