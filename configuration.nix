@@ -125,25 +125,22 @@ in {
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
-  environment.excludePackages =
-    (with pkgs; [
-      gnome-photos
-      gnome-tour
-    ])
-    ++ (with pkgs.gnome; [
-      gnome-music
-      gnome-terminal
-      gedit
-      epiphany
-      geary
-      evince
-      gnome-characters
-      totem
-      tali
-      iagno
-      hitori
-      atomix
-    ]);
+  environment.gnome.excludePackages = with pkgs; [
+    gnome-photos
+    gnome-tour
+    gnome-music
+    gnome-terminal
+    gedit
+    epiphany
+    geary
+    evince
+    gnome-characters
+    totem
+    tali
+    iagno
+    hitori
+    atomix
+  ];
   # end of window manager
 
   home-manager = {
