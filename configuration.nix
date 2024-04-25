@@ -125,7 +125,7 @@ in {
     displayManager.gdm.enable = true;
     desktopManager.gnome.enable = true;
   };
-  environment.gnome.excludePackages =
+  environment.excludePackages =
     (with pkgs; [
       gnome-photos
       gnome-tour
