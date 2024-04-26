@@ -124,6 +124,7 @@ in {
     enable = true;
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
+    desktopManager.plasma5.mobile.installRecommendedSoftware = false;
   };
 
   # end of window manager
