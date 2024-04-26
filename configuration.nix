@@ -122,11 +122,10 @@ in {
   # start of window manager
   services.xserver = {
     enable = true;
-    displayManager.gdm.enable = true;
-    desktopManager.gnome.enable = true;
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
   };
 
-  services.gnome.core-utilities.enable = false;
   # end of window manager
 
   home-manager = {
