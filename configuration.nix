@@ -78,12 +78,14 @@
     vscode
     gcc
     greetd.tuigreet
-    font-awesome
     zsh
     nushell
     ripgrep
     btop
   #  get
+  ];
+  fonts.packages = with pkgs; [
+    font-awesome
   ];
   programs.zsh.enable = true;
 
@@ -94,7 +96,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd 'Hyprland'";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd 'Hyprland -c ~/.dotfiles/hypr/hyprland.conf'";
           user = "work";
         };
       };

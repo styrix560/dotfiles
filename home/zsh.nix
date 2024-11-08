@@ -1,5 +1,4 @@
 {
-  zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
@@ -22,6 +21,4 @@
       enable = true;
       theme = "af-magic";
     };
-  };
-  home-manager.enable = true;
-}
+  }

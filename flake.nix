@@ -17,14 +17,13 @@
           ({pkgs, ...}: {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.work= import ./home.nix;
+            home-manager.users.work= import ./home/home.nix;
             home-manager.backupFileExtension = "backup";
 
             users.users.work = {
               isNormalUser = true;
               extraGroups = [ "networkmanager" "wheel" ];
               shell = pkgs.zsh;
-              #description = "work";
             };
 
             # Optionally, use home-manager.extraSpecialArgs to pass

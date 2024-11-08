@@ -1,8 +1,8 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
+     /* `otf-font-awesome` is required to be installed for icons  */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
-}
+} 
 
 window#waybar {
     background-color: rgba(43, 48, 59, 0.5);
@@ -66,6 +66,10 @@ button:hover {
 #workspaces button.focused {
     background-color: #64727D;
     box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.active {
+  background-color: #07ad2e;
 }
 
 #workspaces button.urgent {
