@@ -11,3 +11,26 @@
 : 1731167801:0;man conf
 : 1731167805:0;man configuration.nix 
 : 1731324169:0;rebuild
+: 1731336077:0;git log
+: 1731336134:0;systemctl start backup
+: 1731336146:0;systemctl status backup
+: 1731336169:0;journalctl -xeu backup
+: 1731336204:0;backup
+: 1731336211:0;su
+: 1731336228:0;rebuild
+: 1731336280:0;systemctl start backup
+: 1731336291:0;journalctl -xeu backup.service
+: 1731336313:0;vim scripts/rebuild
+: 1731336318:0;vim scripts/backup
+: 1731336327:0;systemctl start backup
+: 1731336335:0;journalctl -xeu backup
+: 1731336375:0;vim scripts/backup
+: 1731336409:0;rebuild
+: 1731336608:0;systemctl start backup
+: 1731336614:0;journalctl -xeu backup
+: 1731336658:0;systemctl status backup
+: 1731336673:0;rebuild
+: 1731336721:0;systemctl start backup
+: 1731336727:0;journalctl -xeu backup
+: 1731336747:0;rebuild
+: 1731336820:0;systemctl start backup

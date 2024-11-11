@@ -113,15 +113,35 @@
       User = "root";
     };
   };
+  systemd.timers."cleanup" = {
+    wantedBy = [ "timers.target" ];
+      timerConfig = {
+        OnCalendar = "daily";
+        Persistent = true;
+      };
+  };
+
   systemd.services."backup" = {
     script = ''
       set -eu
-      ~/.dotfiles/scripts/backup
+      date=$(date '+%Y-%m-%d')
+      cd ~/.dotfiles
+      ${pkgs.git}/bin/git add .
+      ${pkgs.git}/bin/git commit -m "backup: $date"
+      ${pkgs.git}/bin/git push origin main
+
     '';
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
+      User = "work";
     };
+  };
+  systemd.timers."backup" = {
+    wantedBy = [ "timers.target" ];
+      timerConfig = {
+        OnCalendar = "daily";
+        Persistent = true;
+      };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
