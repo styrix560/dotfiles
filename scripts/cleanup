@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-sudo nix-collect-garbage --delete-older-than 7d
+sudo nix-env --delete-generations 7d
+sudo nix-store --gc
 sudo nix-store --optimise

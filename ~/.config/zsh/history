@@ -1,3 +1,13 @@
 : 1731063433:0;git checkout master
 : 1731063439:2;backup
 : 1731063565:25;rebuild
+: 1731067147:0;cleanup
+: 1731067258:0;backup
+: 1731067274:0;sudo reboot -h now
+: 1731067453:0;cleanup
+: 1731067516:0;ls /nix/var/nix/profiles
+: 1731067524:0;cleanup
+: 1731167494:0;rebuild
+: 1731167801:0;man conf
+: 1731167805:0;man configuration.nix 
+: 1731324169:0;rebuild

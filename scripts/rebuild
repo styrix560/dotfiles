@@ -2,5 +2,5 @@
 set -e
 cd  ~/.dotfiles
 git add .
-#vim ~/.config/configuration.nix
+code . -w -n
 sudo nixos-rebuild switch --flake ~/.dotfiles#work

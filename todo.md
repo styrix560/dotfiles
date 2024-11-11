@@ -6,3 +6,4 @@
 - sleep on close
 - waybar styling
 - systemd scripts
+- waylock better styling

@@ -43,8 +43,8 @@
 
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "us";
-    variant = "intl";
+    layout = "eu";
+    # variant = "intl";
   };
 
   # Configure console keymap
@@ -82,6 +82,7 @@
     nushell
     ripgrep
     btop
+    cmake
   #  get
   ];
   fonts.packages = with pkgs; [
@@ -92,15 +93,36 @@
   environment.pathsToLink = [ "/share/zsh" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
-    services.greetd = {
-      enable = true;
-      settings = {
-        default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd 'Hyprland -c ~/.dotfiles/hypr/hyprland.conf'";
-          user = "work";
-        };
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd 'Hyprland -c ~/.dotfiles/hypr/hyprland.conf'";
+        user = "work";
       };
     };
+  };
+
+  systemd.services."cleanup" = {
+    script = ''
+      set -eu
+      ~/.dotfiles/scripts/cleanup
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
+  };
+  systemd.services."backup" = {
+    script = ''
+      set -eu
+      ~/.dotfiles/scripts/backup
+    '';
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
