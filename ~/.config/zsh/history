@@ -34,3 +34,4 @@
 : 1731336727:0;journalctl -xeu backup
 : 1731336747:0;rebuild
 : 1731336820:0;systemctl start backup
+: 1731336826:0;journalctl -xeu backup
