@@ -42,13 +42,13 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "eu";
-    # variant = "intl";
-  };
+  # services.xserver.xkb = {
+  #   layout = "eu";
+  #   # variant = "intl";
+  # };
 
   # Configure console keymap
-  console.keyMap = "us-acentos";
+  console.keyMap = "us";
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
 

@@ -1,5 +1,7 @@
-#!/env/bin/usr bash
+#!/usr/bin/env bash
 
+cd ~/.dotfiles
 date=$(date '+%Y-%m-%d')
+git add .
 git commit -m "backup: $date"
 git push origin main
