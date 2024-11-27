@@ -84,6 +84,8 @@
     btop
     cmake
   #  get
+    zip
+    unzip
   ];
   fonts.packages = with pkgs; [
     font-awesome
@@ -97,20 +99,21 @@
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --remember-session --cmd 'Hyprland -c ~/.dotfiles/hypr/hyprland.conf'";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --remember --cmd 'Hyprland -c ~/.dotfiles/hypr/hyprland.conf'";
         user = "work";
       };
     };
   };
 
   systemd.services."cleanup" = {
+    # This is terrible. Change this if possible
+    path = ["/run/current-system/sw"];
     script = ''
-      set -eu
-      ~/.dotfiles/scripts/cleanup
+      bash ~/.dotfiles/scripts/cleanup
     '';
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
+      User = "work";
     };
   };
   systemd.timers."cleanup" = {
@@ -122,14 +125,9 @@
   };
 
   systemd.services."backup" = {
+    # This is terrible. Change this if possible
     script = ''
-      set -eu
-      date=$(date '+%Y-%m-%d')
-      cd ~/.dotfiles
-      ${pkgs.git}/bin/git add .
-      ${pkgs.git}/bin/git commit -m "backup: $date"
-      ${pkgs.git}/bin/git push origin main
-
+      bash ~/.dotfiles/scripts/backup
     '';
     serviceConfig = {
       Type = "oneshot";
