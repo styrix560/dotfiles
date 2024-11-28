@@ -3,14 +3,13 @@
     settings = {
       mainBar = {
         layer = "top";
-        height = 20;
+        height = 24;
         margin = "0";
         reload_style_on_change = true;
         modules-left = [
           "cpu"
           "memory"
           "disk"
-          "temperature"
           "battery"
         ];
         modules-center = [ "hyprland/workspaces" ];
