@@ -7,3 +7,4 @@
 - waybar styling
 - systemd scripts
 - waylock better styling
+- use alejandra

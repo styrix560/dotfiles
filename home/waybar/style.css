@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons  */
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 window#waybar {
@@ -54,7 +54,6 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 0 5px;
   background-color: transparent;
   color: #ffffff;
 }
@@ -81,11 +80,6 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-#window,
-#workspaces {
-  margin: 0 4px;
-}
-
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left>widget:first-child>#workspaces {
   margin-left: 0;
@@ -100,11 +94,11 @@ button:hover {
 #battery.plugged,
 #cpu,
 #memory,
-#disk {
-  color: #ffffff;
-  background-color: #26A65B;
-  margin-left: 5px;
-  margin-right: 5px;
+#disk,
+#network,
+#calendar {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 @keyframes blink {
@@ -145,9 +139,10 @@ label:focus {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#network {
+#network,
+#battery {
   background-color: #2980b9;
-  padding: 0 10px;
+  padding: 0 5px;
   color: #ffffff;
   border-radius: 5px;
 }

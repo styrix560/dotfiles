@@ -87,6 +87,7 @@
     wofi
     zip
     zsh
+    spotify
   ];
   fonts.packages = with pkgs; [
     font-awesome
