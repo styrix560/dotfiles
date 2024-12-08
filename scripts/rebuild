@@ -1,5 +1,12 @@
 set -e
+if [[ $* == *-y* ]]; then 
+    sudo nixos-rebuild switch --flake ~/.dotfiles#work
+    exit 0
+fi
+
 cd  ~/.dotfiles
 git add .
 code . -w -n
-sudo nixos-rebuild switch --flake ~/.dotfiles#work
+if [[ $* != *-n* ]]; then 
+    sudo nixos-rebuild switch --flake ~/.dotfiles#work
+fi

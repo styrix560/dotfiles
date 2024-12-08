@@ -5,16 +5,17 @@
     syntaxHighlighting.enable = true;
     
     shellAliases = {
-      ll = "ls -lAh";
-      l = "ls -lh";
+      aa = "ls -lAh";
+      a = "ls -lh";
     };
     history = {
       size = 10000;
-      path = "~/.config/zsh/history";
+      path = "/home/work/.config/zsh/history";
     };
     initExtra = ''
       export PATH=/home/work/.dotfiles/scripts:$PATH
       export PATH=/home/work/.cargo/bin:$PATH
+      export RUST_BACKTRACE=1
     '';
 
     oh-my-zsh = {
