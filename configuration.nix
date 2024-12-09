@@ -22,6 +22,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    pulse.enable = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Europe/Berlin";
@@ -76,19 +83,21 @@
     greetd.tuigreet
     nushell
     postman
+    pulseaudio
     ripgrep
     rustup 
+    spotify
     swayidle
     swaylock-effects
     unzip
     helix
-    vim
+    valgrind
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     vscode
     waybar
     wofi
     zip
     zsh
-    spotify
   ];
   fonts.packages = with pkgs; [
     font-awesome
@@ -161,7 +170,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -176,5 +185,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.05"; # Did you read the comment?
-
 }
