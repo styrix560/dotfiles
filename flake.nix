@@ -22,7 +22,7 @@
 
             users.users.work = {
               isNormalUser = true;
-              extraGroups = [ "networkmanager" "wheel" ];
+              extraGroups = [ "networkmanager" "wheel" "docker"];
               shell = pkgs.zsh;
             };
 

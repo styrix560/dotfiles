@@ -79,9 +79,10 @@
     ripgrep
     rustup 
     swayidle
-    swaylock
+    swaylock-effects
     unzip
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    helix
+    vim
     vscode
     waybar
     wofi
@@ -96,6 +97,11 @@
 
   environment.pathsToLink = [ "/share/zsh" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  services.logind = {
+    lidSwitch = "suspend";
+    lidSwitchDocked = "suspend";
+  };
 
   services.greetd = {
     enable = true;
