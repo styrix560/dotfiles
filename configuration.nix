@@ -84,6 +84,7 @@
     nushell
     postman
     pulseaudio
+    qemu
     ripgrep
     rustup 
     spotify
@@ -102,7 +103,11 @@
     font-awesome
   ];
   programs.zsh.enable = true;
+  programs.nix-ld.enable = true;
 
+  programs.nix-ld.libraries = with pkgs; [
+
+  ];
   environment.pathsToLink = [ "/share/zsh" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
