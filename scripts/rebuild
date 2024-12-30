@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -e
 if [[ $* == *-y* ]]; then 
     sudo nixos-rebuild switch --flake ~/.dotfiles#work
