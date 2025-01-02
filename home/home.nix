@@ -10,6 +10,16 @@
     nix-direnv.enable = true;
   };
 
+  programs.helix = {
+    enable = true;
+    languages = {
+        rust = {
+          auto-format = true;
+          formatter.command = "cargo fmt";
+        };
+      };
+  };
+
   programs.home-manager.enable = true;
   home.stateVersion = "23.11";
 }

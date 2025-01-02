@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable ? import <nixos-unstable> {},... }:
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -76,28 +76,34 @@
     btop
     cmake
     dolphin
+    dunst
     firefox
     gcc
     git
     github-desktop
     greetd.tuigreet
+    helix
     nushell
     postman
     pulseaudio
     ripgrep
     rustup 
     spotify
+    alejandra
     swayidle
     swaylock-effects
     unzip
-    helix
     valgrind
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     vscode
     waybar
     wofi
+    qemu
     zip
     zsh
+    wl-clipboard
+    grim
+    slurp
   ];
   fonts.packages = with pkgs; [
     font-awesome
@@ -120,44 +126,54 @@
         user = "work";
       };
     };
+    # vt = 2;
   };
 
-  systemd.services."cleanup" = {
-    # This is terrible. Change this if possible
-    path = ["/run/current-system/sw"];
-    script = ''
-      bash ~/.dotfiles/scripts/cleanup
-    '';
-    serviceConfig = {
-      Type = "oneshot";
-      User = "work";
-    };
-  };
-  systemd.timers."cleanup" = {
-    wantedBy = [ "timers.target" ];
-      timerConfig = {
-        OnCalendar = "daily";
-        Persistent = true;
-      };
-  };
+  programs.nix-ld.enable = true;
 
-  systemd.services."backup" = {
-    # This is terrible. Change this if possible
-    script = ''
-      bash ~/.dotfiles/scripts/backup
-    '';
-    serviceConfig = {
-      Type = "oneshot";
-      User = "work";
-    };
-  };
-  systemd.timers."backup" = {
-    wantedBy = [ "timers.target" ];
-      timerConfig = {
-        OnCalendar = "daily";
-        Persistent = true;
-      };
-  };
+  programs.nix-ld.libraries = with pkgs; [
+    # "xtensa-esp32-elf-g++"
+    # Add any missing dynamic libraries for unpackaged programs
+
+    # here, NOT in environment.systemPackages
+  ];
+
+  # systemd.services."cleanup" = {
+  #   # This is terrible. Change this if possible
+  #   path = ["/run/current-system/sw"];
+  #   script = ''
+  #     bash ~/.dotfiles/scripts/cleanup
+  #   '';
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     User = "work";
+  #   };
+  # };
+  # systemd.timers."cleanup" = {
+  #   wantedBy = [ "timers.target" ];
+  #     timerConfig = {
+  #       OnCalendar = "daily";
+  #       Persistent = true;
+  #     };
+  # };
+
+  # systemd.services."backup" = {
+  #   # This is terrible. Change this if possible
+  #   script = ''
+  #     bash ~/.dotfiles/scripts/backup
+  #   '';
+  #   serviceConfig = {
+  #     Type = "oneshot";
+  #     User = "work";
+  #   };
+  # };
+  # systemd.timers."backup" = {
+  #   wantedBy = [ "timers.target" ];
+  #     timerConfig = {
+  #       OnCalendar = "daily";
+  #       Persistent = true;
+  #     };
+  # };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

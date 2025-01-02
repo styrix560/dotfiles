@@ -10,7 +10,6 @@
     };
     history = {
       size = 10000;
-      path = "/home/work/.config/zsh/history";
     };
     initExtra = ''
       export PATH=/home/work/.dotfiles/scripts:$PATH
@@ -23,3 +22,4 @@
       theme = "af-magic";
     };
   }
+  
