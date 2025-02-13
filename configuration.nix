@@ -72,6 +72,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     alacritty
+    alejandra
     brightnessctl
     btop
     cmake
@@ -82,45 +83,40 @@
     git
     github-desktop
     greetd.tuigreet
-    helix
+    grim
     nushell
     postman
     pulseaudio
     qemu
+    qemu
     ripgrep
     rustup 
+    slurp
     spotify
-    alejandra
+    stockfish
     swayidle
     swaylock-effects
     unzip
     valgrind
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     vscode
+    wabt
     waybar
+    wl-clipboard
     wofi
-    qemu
     zip
     zsh
-    wl-clipboard
-    grim
-    slurp
   ];
   fonts.packages = with pkgs; [
     font-awesome
   ];
   programs.zsh.enable = true;
-  programs.nix-ld.enable = true;
-
-  programs.nix-ld.libraries = with pkgs; [
-
-  ];
   environment.pathsToLink = [ "/share/zsh" ];
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   services.logind = {
-    lidSwitch = "suspend";
-    lidSwitchDocked = "suspend";
+    # lidSwitch = "suspend";
+    # lidSwitchDocked = "suspend";
   };
 
   services.greetd = {
@@ -137,7 +133,6 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [
-    # "xtensa-esp32-elf-g++"
     # Add any missing dynamic libraries for unpackaged programs
 
     # here, NOT in environment.systemPackages
