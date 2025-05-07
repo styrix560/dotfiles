@@ -1,0 +1,8 @@
+[editor]
+completion-timeout = 5
+
+[keys.normal]
+A-s = ":w"
+
+[keys.insert]
+A-s = ":w"
