@@ -1,6 +1,9 @@
 [editor]
 completion-timeout = 5
 
+[editor.cursor-shape]
+insert = "bar"
+
 [keys.normal]
 A-s = ":w"
 

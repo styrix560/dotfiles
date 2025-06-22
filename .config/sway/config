@@ -17,11 +17,16 @@ set $right l
 set $term ghostty
 # Your preferred application launcher
 set $menu wmenu-run
+set $notification dunst
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg $HOME/wallpapers/arch.png fill
+
+exec $notification
+exec /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh
+
 #
 # Example configuration:
 #
