@@ -6,6 +6,8 @@ insert = "bar"
 
 [keys.normal]
 A-s = ":w"
+A-f = ":fmt"
 
 [keys.insert]
 A-s = ":w"
+A-f = ":fmt"

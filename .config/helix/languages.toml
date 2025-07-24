@@ -1,7 +1,5 @@
-[language-server.typescript-language-server]
-command = "typescript-language-server"
-args = ["--stdio"]
-config.hostInfo = "helix"
+[[language]]
+name = "rust"
 auto-format = true
 
 [[language]]
@@ -11,7 +9,14 @@ auto-format = true
 
 [[language]]
 name = "typescript"
+language-servers = ["ts-lsp"]
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+auto-format = true
+
+[language-server.ts-lsp]
+command = "typescript-language-server"
+args = ["--stdio"]
+config.hostInfo = "helix"
 auto-format = true
 
 [[language]]
@@ -27,4 +32,13 @@ auto-format = true
 
 [[language]]
 name = "dart"
-language-server = {command = "dart", args = ["language-server"]}
+language-servers = ["dart-lsp"]
+
+[language-server.dart-lsp]
+command = "dart"
+args = ["language-server"]
+
+[[language]]
+name = "markdown"
+formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
