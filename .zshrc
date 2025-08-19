@@ -16,6 +16,9 @@ alias pacr="sudo pacman -Rns"
 alias zj="zellij"
 alias zjl="zellij --layout layout.kdl"
 alias ip="ip --color=auto"
+alias l="exa -l --icons"
+alias ll="exa -l -a --icons"
+alias cd="z"
 
 alias docker="podman"
 
@@ -52,7 +55,17 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+eval "$(zoxide init zsh)"
 
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
+
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/home/user/.opam/opam-init/init.zsh' ]] || source '/home/user/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration

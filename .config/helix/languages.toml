@@ -2,6 +2,9 @@
 name = "rust"
 auto-format = true
 
+[language-server.zls]
+command = "/usr/bin/zls"
+
 [[language]]
 name = "javascript"
 formatter = { command = 'prettier', args = ["--parser", "typescript"] }
@@ -42,4 +45,8 @@ args = ["language-server"]
 [[language]]
 name = "markdown"
 formatter = { command = 'prettier', args = ["--parser", "markdown"] }
+auto-format = true
+
+[[language]]
+name = "c"
 auto-format = true
