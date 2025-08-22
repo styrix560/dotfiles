@@ -4,6 +4,7 @@ Description=Backup dotfiles daily
 [Timer]
 OnCalendar=daily
 Persistent=true
+Unit=dotfiles-backup.service
 
 [Install]
-WantedBy=dotfiles-backup.service
+WantedBy=timers.target
