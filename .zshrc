@@ -19,6 +19,7 @@ alias ip="ip --color=auto"
 alias l="exa -l --icons"
 alias ll="exa -l -a --icons"
 alias cd="z"
+alias ff="firefox"
 
 alias docker="podman"
 
