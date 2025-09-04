@@ -20,6 +20,7 @@ alias l="exa -l --icons"
 alias ll="exa -l -a --icons"
 alias cd="z"
 alias ff="firefox"
+alias esarun="flutter run --flavor euroskillsDev --dart-define-from-file=dart_defines.json"
 
 alias docker="podman"
 
