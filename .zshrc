@@ -24,6 +24,7 @@ alias esa="flutter run --flavor euroskillsDev --dart-define-from-file=dart_defin
 alias eshd="flutter run --dart-define-from-file=dart_defines.json --web-port=5001"
 alias ga="git add"
 alias gcm="git commit -m"
+alias start_snx="sudo snx-rs -m command &"
 
 alias docker="podman"
 
