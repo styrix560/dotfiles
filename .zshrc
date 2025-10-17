@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 export PATH="$HOME/dev/flutter/bin:$PATH"
+export PATH="$HOME/dev/Squeak/:$PATH"
 export RUSTC_WRAPPER=sccache
 
 # Path to your Oh My Zsh installation.
