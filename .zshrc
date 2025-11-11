@@ -28,7 +28,7 @@ alias ga="git add"
 alias gcm="git commit -m"
 alias start_snx="sudo snx-rs -m command &"
 
-alias docker="podman"
+# alias docker="podman"
 
 alias gff='git pull --ff-only upstream $(git branch --show-current)'
 
