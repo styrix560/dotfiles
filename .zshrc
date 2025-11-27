@@ -27,6 +27,7 @@ alias eshd="flutter run --dart-define-from-file=dart_defines.json --web-port=500
 alias ga="git add"
 alias gcm="git commit -m"
 alias start_snx="sudo snx-rs -m command &"
+alias docker="podman"
 
 # alias docker="podman"
 
