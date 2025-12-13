@@ -7,6 +7,8 @@ if status is-interactive
     abbr pacs sudo pacman -S
     abbr pacr sudo pacman -Rns
 
+    abbr vpn sudo snx-rs -m command &
+
     alias cd z
 
     source $HOME/.config/fish/zoxide.fish
