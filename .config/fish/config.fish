@@ -11,5 +11,10 @@ if status is-interactive
 
     alias cd z
 
+    abbr ga git add .
+    abbr gc git commit
+    abbr gcm git commit -m
+    abbr gp git push
+
     source $HOME/.config/fish/zoxide.fish
 end
