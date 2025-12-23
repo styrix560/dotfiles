@@ -10,6 +10,8 @@ if status is-interactive
     abbr vpn sudo snx-rs -m command &
 
     alias cd z
+    abbr l ls -lA
+    alias hx helix
 
     abbr ga git add .
     abbr gc git commit
